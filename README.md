@@ -59,7 +59,7 @@ I’m Aparna Bharathi Suresh, a passionate data analytics graduate student focus
 
 - 🎓 MS in Data Analytics, San Jose State University  
 - 💡 Interests: Generative AI, Big Data, Machine Learning, Visualization  
-- 🌐 [LinkedIn]([https://www.linkedin.com/in/aparna-suresh-4520512a3/])  
+- 🌐 [LinkedIn](https://www.linkedin.com/in/aparna-suresh-4520512a3/)  
 - ✉️ Contact: aparnabharathi.suresh@sjsu.edu
 
 ---
