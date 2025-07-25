@@ -15,7 +15,7 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 - Query optimization and data retrieval with SQL
 
 ### 📐 Mathematical Foundations 
-- [📁 View Folder](./DATA220_MathematicalMethodsForDataAnalytics)
+- [📁 View Folder](./DATA220_MathematicalMethodsforDataAnalytics)
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
