@@ -7,32 +7,38 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 ## 🧠 Domains Covered
 
 ### 📊 Data Visualization
+[📁 View Folder](./DATA220_MathematicalMethodsforDataAnalytics)
 - Visual storytelling with Tableau Public
 - Python-based exploratory data analysis using `matplotlib` and `seaborn`
 
 ### 🗃️ Databases & SQL
+[📁 View Folder](./Data225_DatabaseSystems)
 - Relational schema design and ER modeling
 - Query optimization and data retrieval with SQL
 
 ### 📐 Mathematical Foundations 
-- [📁 View Folder](./DATA220_MathematicalMethodsforDataAnalytics)
+[📁 View Folder](./DATA220_MathematicalMethodsforDataAnalytics)
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
 ### 🧵 Big Data & Distributed Systems
+[📁 View Folder](./Data225_DatabaseSystems)
 - Spark and Hadoop-based data pipelines
 - PySpark for large-scale transformations
 - Scalable file processing and cloud-based DAGs
 
 ### 🧠 Machine Learning
+[📁 View Folder](./Data225_DatabaseSystems)
 - Model training and evaluation using `scikit-learn`
 - Projects involving classification, regression, clustering
 
 ### 🤖 Deep Learning
+[📁 View Folder](./Data225_DatabaseSystems)
 - CNNs, RNNs, and transformers implemented with PyTorch or TensorFlow
 - Model visualization, training analysis, and evaluation metrics
 
 ### 🧬 Generative AI
+[📁 View Folder](./Data225_DatabaseSystems)
 - Applications of LLMs and diffusion models
 - Fine-tuning, prompt engineering, and RAG-based systems
 
