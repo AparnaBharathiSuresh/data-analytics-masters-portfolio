@@ -6,18 +6,15 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 
 ## 🧠 Domains Covered
 
-### 📊 Data Visualization
-[📁 View Folder](./DATA220_MathematicalMethodsforDataAnalytics)
+### [📊 Data Visualization](./DATA220_MathematicalMethodsforDataAnalytics)
 - Visual storytelling with Tableau Public
 - Python-based exploratory data analysis using `matplotlib` and `seaborn`
 
-### 🗃️ Databases & SQL
-[📁 View Folder](./Data225_DatabaseSystems)
+### [🗃️ Databases & SQL](./Data225_DatabaseSystems)
 - Relational schema design and ER modeling
 - Query optimization and data retrieval with SQL
 
-### 📐 Mathematical Foundations 
-[📁 View Folder](./DATA220_MathematicalMethodsforDataAnalytics)
+### [📐 Mathematical Foundations](./DATA220_MathematicalMethodsforDataAnalytics)
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
