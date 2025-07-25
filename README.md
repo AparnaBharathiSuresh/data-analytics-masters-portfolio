@@ -41,7 +41,7 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 
 - [Profit Report](https://public.tableau.com/views/Assignment4_AparnaSuresh/Story1)
 - [Video Game Sales Dashboard](https://public.tableau.com/app/profile/aparna.bharathi.suresh/viz/Assignment1_Aparna_17087304538840/Story1)
-- *(More visualizations coming soon)*
+- [Life Expectancy Analysis] (https://public.tableau.com/views/DATA_230_Project/Story1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
 
 ---
 
