@@ -39,7 +39,7 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 
 ## 🌐 Tableau Public Visualizations
 
-- [MSFT Stock & Weather Trends](https://public.tableau.com/views/Assignment4_AparnaSuresh/Story1)
+- [Profit Report](https://public.tableau.com/views/Assignment4_AparnaSuresh/Story1)
 - [Video Game Sales Dashboard](https://public.tableau.com/app/profile/aparna.bharathi.suresh/viz/Assignment1_Aparna_17087304538840/Story1)
 - *(More visualizations coming soon)*
 
