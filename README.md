@@ -14,7 +14,8 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 - Relational schema design and ER modeling
 - Query optimization and data retrieval with SQL
 
-### 📐 Mathematical Foundations
+### 📐 Mathematical Foundations 
+- [📁 View Folder](./DATA220MathematicalMethodsForDataAnalytics)
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
