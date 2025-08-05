@@ -6,36 +6,39 @@ Welcome to my personal portfolio showcasing hands-on work across graduate-level 
 
 ## 🧠 Domains Covered
 
-### [📊 Data Visualization](./DATA220_MathematicalMethodsforDataAnalytics)
+### [📊 Data Visualization]
+[📁 View Folder](./DataVisualization)
 - Visual storytelling with Tableau Public
 - Python-based exploratory data analysis using `matplotlib` and `seaborn`
 
-### [🗃️ Databases & SQL](./Data225_DatabaseSystems)
+### [🗃️ Databases & SQL]
+[📁 View Folder](./DatabaseSystems)
 - Relational schema design and ER modeling
 - Query optimization and data retrieval with SQL
 
-### [📐 Mathematical Foundations](./DATA220_MathematicalMethodsforDataAnalytics)
+### [📐 Mathematical Foundations]
+[📁 View Folder](./MathematicalMethodsForDataAnalytics)
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
 ### 🧵 Big Data & Distributed Systems
-[📁 View Folder](./Data225_DatabaseSystems)
+[📁 View Folder](./BigDataAnalytics)
 - Spark and Hadoop-based data pipelines
 - PySpark for large-scale transformations
 - Scalable file processing and cloud-based DAGs
 
 ### 🧠 Machine Learning
-[📁 View Folder](./Data225_DatabaseSystems)
+[📁 View Folder](./Machine Learning)
 - Model training and evaluation using `scikit-learn`
 - Projects involving classification, regression, clustering
 
 ### 🤖 Deep Learning
-[📁 View Folder](./Data225_DatabaseSystems)
+[📁 View Folder](./DeepLearning)
 - CNNs, RNNs, and transformers implemented with PyTorch or TensorFlow
 - Model visualization, training analysis, and evaluation metrics
 
 ### 🧬 Generative AI
-[📁 View Folder](./Data225_DatabaseSystems)
+[📁 View Folder](./GenAI)
 - Applications of LLMs and diffusion models
 - Fine-tuning, prompt engineering, and RAG-based systems
 
