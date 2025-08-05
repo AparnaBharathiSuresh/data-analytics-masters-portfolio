@@ -1,0 +1,10 @@
+Taylor,Ashley,12350,ashleytaylor@sjsu.edu,ashleytaylor@gmail.com
+Anderson,Patricia,12351,patriciaanderson@sjsu.edu,patriciaanderson@gmail.com
+Thomas,Matthew,12352,matthewthomas@sjsu.edu,matthewthomas@gmail.com
+Jackson,Amy,12353,amyjackson@sjsu.edu,amyjackson@gmail.com
+White,Daniel,12354,danielwhite@sjsu.edu,danielwhite@gmail.com
+Harris,Jessica,12355,jessicaharris@sjsu.edu
+Martin,Charles,12356,charlesmartin@sjsu.edu
+Thompson,Emily,12357,emilythompson@sjsu.edu
+Garcia,Maria,12358,mariagarcia@sjsu.edu
+Martinez,Robert,12359,robertmartinez@sjsu.edu

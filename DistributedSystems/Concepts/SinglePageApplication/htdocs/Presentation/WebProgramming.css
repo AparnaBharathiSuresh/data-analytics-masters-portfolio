@@ -1,0 +1,26 @@
+	html, body {
+			background-image: url('Images/Backdrop-1.PNG');
+            max-height: 100vh; 
+            overflow-y: auto; 
+            height: 100%;
+            margin: 5;
+			text-align:center;
+			justify-content: center;
+			align-items: center;
+			font-family: 'Roboto', sans-serif;
+        }
+    body {
+            background-image: url('Images/Backdrop-1.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+			overflow: hidden;
+			font-size:18px;
+        }
+    a {
+            color: blue;
+            font-size: 18px;
+			text-decoration: none;
+        }
+    a:hover {
+            text-decoration: underline;
+        }

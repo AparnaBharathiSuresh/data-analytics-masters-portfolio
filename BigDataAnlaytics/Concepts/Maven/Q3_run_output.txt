@@ -1,0 +1,5 @@
+C:\Users\aparn>java -cp target/helloworld-1.0.jar edu.sjsu.data228.aparnasuresh.App > run_output.txt
+Hello World, Aparna
+Today is 2024-09-08
+Random Number is 12
+Square of 12 is 144

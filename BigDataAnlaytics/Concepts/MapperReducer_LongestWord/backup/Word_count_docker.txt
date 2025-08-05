@@ -1,0 +1,2712 @@
+Microsoft Windows [Version 10.0.22631.4169]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\aparn>docker -version
+unknown shorthand flag: 'e' in -ersion
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  debug*      Get a shell into any image or container.
+  dev*        Docker Dev Environments
+  extension*  Manages Docker extensions
+  feedback*   Provide feedback, right in your terminal!
+  image       Manage images
+  init*       Creates Docker-related starter files for your project
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image
+  scout*      Docker Scout
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default
+                           "C:\\Users\\aparn\\.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info",
+                           "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "C:\\Users\\aparn\\.docker\\ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "C:\\Users\\aparn\\.docker\\cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "C:\\Users\\aparn\\.docker\\key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+
+
+C:\Users\aparn>docker --version
+Docker version 26.0.0, build 2ae903e
+
+C:\Users\aparn>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+ubuntu                     latest    61b2756d6fa9   2 weeks ago     78.1MB
+docker/welcome-to-docker   latest    c1f619b6477e   11 months ago   18.6MB
+
+C:\Users\aparn>docker run -e TZ=America/Los_Angeles your_image_name
+Unable to find image 'your_image_name:latest' locally
+docker: Error response from daemon: pull access denied for your_image_name, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+
+C:\Users\aparn>docker run -e TZ=America/Los_Angeles ubuntu
+
+C:\Users\aparn>docker run -it ubuntu /bin/bash
+root@0c5468e9a031:/# apt update
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [13.7 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [479 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [370 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [446 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [512 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [17.8 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [446 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [682 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [11.8 kB]
+Fetched 25.2 MB in 5s (5023 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@0c5468e9a031:/# apt install -y openjdk-11-jdk
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  adduser alsa-topology-conf alsa-ucm-conf at-spi2-common at-spi2-core ca-certificates ca-certificates-java dbus
+  dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common dbus-user-session dconf-gsettings-backend
+  dconf-service dmsetup fontconfig-config fonts-dejavu-core fonts-dejavu-extra fonts-dejavu-mono
+  gir1.2-girepository-2.0 gir1.2-glib-2.0 gsettings-desktop-schemas java-common krb5-locales libapparmor1 libargon2-1
+  libasound2-data libasound2t64 libatk-bridge2.0-0t64 libatk-wrapper-java libatk-wrapper-java-jni libatk1.0-0t64
+  libatspi2.0-0t64 libavahi-client3 libavahi-common-data libavahi-common3 libbrotli1 libbsd0 libcryptsetup12
+  libcups2t64 libdbus-1-3 libdconf1 libdevmapper1.02.1 libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2
+  libdrm-radeon1 libdrm2 libedit2 libelf1t64 libexpat1 libfdisk1 libfontconfig1 libfreetype6 libgif7
+  libgirepository-1.0-1 libgl1 libgl1-amber-dri libgl1-mesa-dri libglapi-mesa libglib2.0-0t64 libglib2.0-data
+  libglvnd0 libglx-mesa0 libglx0 libgraphite2-3 libgssapi-krb5-2 libharfbuzz0b libice-dev libice6 libicu74
+  libjpeg-turbo8 libjpeg8 libjson-c5 libk5crypto3 libkeyutils1 libkmod2 libkrb5-3 libkrb5support0 liblcms2-2
+  libllvm17t64 libnspr4 libnss-systemd libnss3 libpam-systemd libpciaccess0 libpcsclite1 libpng16-16t64
+  libpthread-stubs0-dev libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib libreadline8t64 libsensors-config
+  libsensors5 libsm-dev libsm6 libsqlite3-0 libsystemd-shared libvulkan1 libwayland-client0 libx11-6 libx11-data
+  libx11-dev libx11-xcb1 libxau-dev libxau6 libxaw7 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0
+  libxcb-randr0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxcb1-dev libxcomposite1 libxdmcp-dev
+  libxdmcp6 libxext6 libxfixes3 libxft2 libxi6 libxinerama1 libxkbfile1 libxml2 libxmu6 libxmuu1 libxpm4 libxrandr2
+  libxrender1 libxshmfence1 libxt-dev libxt6t64 libxtst6 libxv1 libxxf86dga1 libxxf86vm1 media-types
+  mesa-vulkan-drivers netbase networkd-dispatcher openjdk-11-jdk-headless openjdk-11-jre openjdk-11-jre-headless
+  openssl python3 python3-dbus python3-gi python3-minimal python3.12 python3.12-minimal readline-common
+  session-migration shared-mime-info systemd systemd-dev systemd-resolved systemd-sysv systemd-timesyncd tzdata
+  x11-common x11-utils x11proto-dev xdg-user-dirs xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  liblocale-gettext-perl perl cron quota ecryptfs-utils default-jre alsa-utils libasound2-plugins cups-common
+  low-memory-monitor krb5-doc krb5-user libice-doc liblcms2-utils pciutils pcscd lm-sensors libsm-doc libx11-doc
+  libxcb-doc libxt-doc iw | wireless-tools openjdk-11-demo openjdk-11-source visualvm libnss-mdns fonts-ipafont-gothic
+  fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic python3-doc python3-tk python3-venv
+  python-dbus-doc python3.12-venv python3.12-doc binutils binfmt-support readline-doc systemd-container systemd-homed
+  systemd-userdbd systemd-boot libfido2-1 libip4tc2 libqrencode4 libtss2-esys-3.0.2-0 libtss2-mu-4.0.1-0 libtss2-rc0
+  libtss2-tcti-device0 polkitd mesa-utils
+Recommended packages:
+  luit
+The following NEW packages will be installed:
+  adduser alsa-topology-conf alsa-ucm-conf at-spi2-common at-spi2-core ca-certificates ca-certificates-java dbus
+  dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common dbus-user-session dconf-gsettings-backend
+  dconf-service dmsetup fontconfig-config fonts-dejavu-core fonts-dejavu-extra fonts-dejavu-mono
+  gir1.2-girepository-2.0 gir1.2-glib-2.0 gsettings-desktop-schemas java-common krb5-locales libapparmor1 libargon2-1
+  libasound2-data libasound2t64 libatk-bridge2.0-0t64 libatk-wrapper-java libatk-wrapper-java-jni libatk1.0-0t64
+  libatspi2.0-0t64 libavahi-client3 libavahi-common-data libavahi-common3 libbrotli1 libbsd0 libcryptsetup12
+  libcups2t64 libdbus-1-3 libdconf1 libdevmapper1.02.1 libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2
+  libdrm-radeon1 libdrm2 libedit2 libelf1t64 libexpat1 libfdisk1 libfontconfig1 libfreetype6 libgif7
+  libgirepository-1.0-1 libgl1 libgl1-amber-dri libgl1-mesa-dri libglapi-mesa libglib2.0-0t64 libglib2.0-data
+  libglvnd0 libglx-mesa0 libglx0 libgraphite2-3 libgssapi-krb5-2 libharfbuzz0b libice-dev libice6 libicu74
+  libjpeg-turbo8 libjpeg8 libjson-c5 libk5crypto3 libkeyutils1 libkmod2 libkrb5-3 libkrb5support0 liblcms2-2
+  libllvm17t64 libnspr4 libnss-systemd libnss3 libpam-systemd libpciaccess0 libpcsclite1 libpng16-16t64
+  libpthread-stubs0-dev libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib libreadline8t64 libsensors-config
+  libsensors5 libsm-dev libsm6 libsqlite3-0 libsystemd-shared libvulkan1 libwayland-client0 libx11-6 libx11-data
+  libx11-dev libx11-xcb1 libxau-dev libxau6 libxaw7 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0
+  libxcb-randr0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxcb1-dev libxcomposite1 libxdmcp-dev
+  libxdmcp6 libxext6 libxfixes3 libxft2 libxi6 libxinerama1 libxkbfile1 libxml2 libxmu6 libxmuu1 libxpm4 libxrandr2
+  libxrender1 libxshmfence1 libxt-dev libxt6t64 libxtst6 libxv1 libxxf86dga1 libxxf86vm1 media-types
+  mesa-vulkan-drivers netbase networkd-dispatcher openjdk-11-jdk openjdk-11-jdk-headless openjdk-11-jre
+  openjdk-11-jre-headless openssl python3 python3-dbus python3-gi python3-minimal python3.12 python3.12-minimal
+  readline-common session-migration shared-mime-info systemd systemd-dev systemd-resolved systemd-sysv
+  systemd-timesyncd tzdata x11-common x11-utils x11proto-dev xdg-user-dirs xorg-sgml-doctools xtrans-dev
+0 upgraded, 173 newly installed, 0 to remove and 2 not upgraded.
+Need to get 212 MB of archives.
+After this operation, 638 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.2 [834 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.1 [87.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.2 [2343 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2 [27.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2024a-3ubuntu1.1 [273 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2 [701 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.2 [2069 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.2 [651 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2 [10.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2 [23.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.3 [50.3 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 libargon2-1 amd64 0~20190702+dfsg-4build1 [20.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper1.02.1 amd64 2:1.02.185-3ubuntu3.1 [139 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-c5 amd64 0.17-1build1 [35.3 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcryptsetup12 amd64 2:2.7.0-1ubuntu4.1 [266 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfdisk1 amd64 2.39.3-9ubuntu6.1 [146 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 libkmod2 amd64 31+20240202-2ubuntu7 [51.7 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsystemd-shared amd64 255.4-1ubuntu8.4 [2075 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-dev all 255.4-1ubuntu8.4 [104 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd amd64 255.4-1ubuntu8.4 [3470 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-sysv amd64 255.4-1ubuntu8.4 [11.9 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.4 [1003 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates all 20240203 [159 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdbus-1-3 amd64 1.14.10-4ubuntu4.1 [210 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-bin amd64 1.14.10-4ubuntu4.1 [39.3 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-session-bus-common all 1.14.10-4ubuntu4.1 [80.5 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-daemon amd64 1.14.10-4ubuntu4.1 [118 kB]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-system-bus-common all 1.14.10-4ubuntu4.1 [81.6 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus amd64 1.14.10-4ubuntu4.1 [24.3 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpam-systemd amd64 255.4-1ubuntu8.4 [235 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-user-session amd64 1.14.10-4ubuntu4.1 [9968 B]
+Get:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dmsetup amd64 2:1.02.185-3ubuntu3.1 [79.2 kB]
+Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-0t64 amd64 2.80.0-6ubuntu3.1 [1546 kB]
+Get:39 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-glib-2.0 amd64 2.80.0-6ubuntu3.1 [183 kB]
+Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 libgirepository-1.0-1 amd64 1.80.1-1 [81.9 kB]
+Get:41 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-girepository-2.0 amd64 1.80.1-1 [24.5 kB]
+Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.1 [14.0 kB]
+Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 libbsd0 amd64 0.12.1-1build1 [41.2 kB]
+Get:44 http://archive.ubuntu.com/ubuntu noble/main amd64 libelf1t64 amd64 0.190-1.1build4 [57.6 kB]
+Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-data all 2.80.0-6ubuntu3.1 [48.4 kB]
+Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.1 [33.6 kB]
+Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.1 [81.7 kB]
+Get:48 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+Get:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.1 [347 kB]
+Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.1 [143 kB]
+Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+Get:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss-systemd amd64 255.4-1ubuntu8.4 [159 kB]
+Get:53 http://archive.ubuntu.com/ubuntu noble/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3 [762 kB]
+Get:54 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-dbus amd64 1.3.2-5build3 [100 kB]
+Get:55 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-gi amd64 3.48.2-1 [232 kB]
+Get:56 http://archive.ubuntu.com/ubuntu noble/main amd64 networkd-dispatcher all 2.2.4-1 [15.5 kB]
+Get:57 http://archive.ubuntu.com/ubuntu noble/main amd64 shared-mime-info amd64 2.4-4 [474 kB]
+Get:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-resolved amd64 255.4-1ubuntu8.4 [296 kB]
+Get:59 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-timesyncd amd64 255.4-1ubuntu8.4 [35.3 kB]
+Get:60 http://archive.ubuntu.com/ubuntu noble/main amd64 xdg-user-dirs amd64 0.18-1build1 [18.4 kB]
+Get:61 http://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-common all 2.4.120-2build1 [8096 B]
+Get:62 http://archive.ubuntu.com/ubuntu noble/main amd64 libdrm2 amd64 2.4.120-2build1 [40.5 kB]
+Get:63 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+Get:64 http://archive.ubuntu.com/ubuntu noble/main amd64 libpng16-16t64 amd64 1.6.43-5build1 [187 kB]
+Get:65 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors-config all 1:3.6.0-9build1 [5546 B]
+Get:66 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors5 amd64 1:3.6.0-9build1 [26.6 kB]
+Get:67 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau6 amd64 1:1.0.9-1build6 [7160 B]
+Get:68 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu6 [10.3 kB]
+Get:69 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1 amd64 1.15-1ubuntu2 [47.7 kB]
+Get:70 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-data all 2:1.8.7-1build1 [115 kB]
+Get:71 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-6 amd64 2:1.8.7-1build1 [650 kB]
+Get:72 http://archive.ubuntu.com/ubuntu noble/main amd64 libxext6 amd64 2:1.3.4-1build2 [30.4 kB]
+Get:73 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B]
+Get:74 http://archive.ubuntu.com/ubuntu noble/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.5 kB]
+Get:75 http://archive.ubuntu.com/ubuntu noble/main amd64 libasound2-data all 1.2.11-1build2 [21.0 kB]
+Get:76 http://archive.ubuntu.com/ubuntu noble/main amd64 libasound2t64 amd64 1.2.11-1build2 [399 kB]
+Get:77 http://archive.ubuntu.com/ubuntu noble/main amd64 alsa-ucm-conf all 1.2.10-1ubuntu5 [63.1 kB]
+Get:78 http://archive.ubuntu.com/ubuntu noble/main amd64 at-spi2-common all 2.52.0-1build1 [8674 B]
+Get:79 http://archive.ubuntu.com/ubuntu noble/main amd64 libxi6 amd64 2:1.8.1-1build1 [32.4 kB]
+Get:80 http://archive.ubuntu.com/ubuntu noble/main amd64 libatspi2.0-0t64 amd64 2.52.0-1build1 [80.5 kB]
+Get:81 http://archive.ubuntu.com/ubuntu noble/main amd64 x11-common all 1:7.7+23ubuntu3 [21.7 kB]
+Get:82 http://archive.ubuntu.com/ubuntu noble/main amd64 libxtst6 amd64 2:1.2.3-1.1build1 [12.6 kB]
+Get:83 http://archive.ubuntu.com/ubuntu noble/main amd64 libdconf1 amd64 0.40.0-4build2 [39.4 kB]
+Get:84 http://archive.ubuntu.com/ubuntu noble/main amd64 dconf-service amd64 0.40.0-4build2 [27.5 kB]
+Get:85 http://archive.ubuntu.com/ubuntu noble/main amd64 dconf-gsettings-backend amd64 0.40.0-4build2 [22.1 kB]
+Get:86 http://archive.ubuntu.com/ubuntu noble/main amd64 session-migration amd64 0.3.9build1 [9034 B]
+Get:87 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gsettings-desktop-schemas all 46.1-0ubuntu1 [35.6 kB]
+Get:88 http://archive.ubuntu.com/ubuntu noble/main amd64 at-spi2-core amd64 2.52.0-1build1 [56.6 kB]
+Get:89 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates-java all 20240118 [11.6 kB]
+Get:90 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-mono all 2.37-8 [502 kB]
+Get:91 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-core all 2.37-8 [835 kB]
+Get:92 http://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig-config amd64 2.15.0-1.1ubuntu2 [37.3 kB]
+Get:93 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-extra all 2.37-8 [1947 kB]
+Get:94 http://archive.ubuntu.com/ubuntu noble/main amd64 java-common all 0.75+exp1 [6798 B]
+Get:95 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk1.0-0t64 amd64 2.52.0-1build1 [55.3 kB]
+Get:96 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-bridge2.0-0t64 amd64 2.52.0-1build1 [66.0 kB]
+Get:97 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+Get:98 http://archive.ubuntu.com/ubuntu noble/main amd64 libfreetype6 amd64 2.13.2+dfsg-1build3 [402 kB]
+Get:99 http://archive.ubuntu.com/ubuntu noble/main amd64 libfontconfig1 amd64 2.15.0-1.1ubuntu2 [139 kB]
+Get:100 http://archive.ubuntu.com/ubuntu noble/main amd64 libglvnd0 amd64 1.7.0-1build1 [69.6 kB]
+Get:101 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglapi-mesa amd64 24.0.9-0ubuntu0.1 [41.2 kB]
+Get:102 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-xcb1 amd64 2:1.8.7-1build1 [7800 B]
+Get:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri2-0 amd64 1.15-1ubuntu2 [7222 B]
+Get:104 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri3-0 amd64 1.15-1ubuntu2 [7142 B]
+Get:105 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-glx0 amd64 1.15-1ubuntu2 [24.8 kB]
+Get:106 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-present0 amd64 1.15-1ubuntu2 [5676 B]
+Get:107 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-randr0 amd64 1.15-1ubuntu2 [17.9 kB]
+Get:108 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shm0 amd64 1.15-1ubuntu2 [5756 B]
+Get:109 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-sync1 amd64 1.15-1ubuntu2 [9312 B]
+Get:110 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xfixes0 amd64 1.15-1ubuntu2 [10.2 kB]
+Get:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libxfixes3 amd64 1:6.0.0-2build1 [10.8 kB]
+Get:112 http://archive.ubuntu.com/ubuntu noble/main amd64 libxshmfence1 amd64 1.3-1build5 [4764 B]
+Get:113 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86vm1 amd64 1:1.1.4-1build4 [9282 B]
+Get:114 http://archive.ubuntu.com/ubuntu noble/main amd64 libvulkan1 amd64 1.3.275.0-1build1 [142 kB]
+Get:115 http://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-amdgpu1 amd64 2.4.120-2build1 [20.2 kB]
+Get:116 http://archive.ubuntu.com/ubuntu noble/main amd64 libpciaccess0 amd64 0.17-3build1 [18.6 kB]
+Get:117 http://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-intel1 amd64 2.4.120-2build1 [63.8 kB]
+Get:118 http://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-nouveau2 amd64 2.4.120-2build1 [17.7 kB]
+Get:119 http://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-radeon1 amd64 2.4.120-2build1 [20.8 kB]
+Get:120 http://archive.ubuntu.com/ubuntu noble/main amd64 libllvm17t64 amd64 1:17.0.6-9ubuntu1 [26.2 MB]
+Get:121 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 24.0.9-0ubuntu0.1 [8950 kB]
+Get:122 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 24.0.9-0ubuntu0.1 [154 kB]
+Get:123 http://archive.ubuntu.com/ubuntu noble/main amd64 libglx0 amd64 1.7.0-1build1 [38.6 kB]
+Get:124 http://archive.ubuntu.com/ubuntu noble/main amd64 libgl1 amd64 1.7.0-1build1 [102 kB]
+Get:125 http://archive.ubuntu.com/ubuntu noble/main amd64 libice6 amd64 2:1.0.10-1build3 [41.4 kB]
+Get:126 http://archive.ubuntu.com/ubuntu noble/main amd64 libsm6 amd64 2:1.2.3-1build3 [15.7 kB]
+Get:127 http://archive.ubuntu.com/ubuntu noble/main amd64 libxt6t64 amd64 1:1.2.1-1.2build1 [171 kB]
+Get:128 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmu6 amd64 2:1.1.3-3build2 [47.6 kB]
+Get:129 http://archive.ubuntu.com/ubuntu noble/main amd64 libxpm4 amd64 1:3.5.17-1build2 [36.5 kB]
+Get:130 http://archive.ubuntu.com/ubuntu noble/main amd64 libxaw7 amd64 2:1.0.14-1build2 [187 kB]
+Get:131 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shape0 amd64 1.15-1ubuntu2 [6100 B]
+Get:132 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcomposite1 amd64 1:0.4.5-1build3 [6320 B]
+Get:133 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrender1 amd64 1:0.9.10-1.1build1 [19.0 kB]
+Get:134 http://archive.ubuntu.com/ubuntu noble/main amd64 libxft2 amd64 2.3.6-1build1 [45.3 kB]
+Get:135 http://archive.ubuntu.com/ubuntu noble/main amd64 libxinerama1 amd64 2:1.1.4-3build1 [6396 B]
+Get:136 http://archive.ubuntu.com/ubuntu noble/main amd64 libxkbfile1 amd64 1:1.1.0-1build4 [70.0 kB]
+Get:137 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrandr2 amd64 2:1.5.2-2build1 [19.7 kB]
+Get:138 http://archive.ubuntu.com/ubuntu noble/main amd64 libxv1 amd64 2:1.0.11-1.1build1 [10.7 kB]
+Get:139 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86dga1 amd64 2:1.1.5-1build1 [11.6 kB]
+Get:140 http://archive.ubuntu.com/ubuntu noble/main amd64 x11-utils amd64 7.7+6build2 [189 kB]
+Get:141 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java all 0.40.0-3build2 [54.3 kB]
+Get:142 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java-jni amd64 0.40.0-3build2 [46.4 kB]
+Get:143 http://archive.ubuntu.com/ubuntu noble/main amd64 libavahi-common-data amd64 0.8-13ubuntu6 [29.7 kB]
+Get:144 http://archive.ubuntu.com/ubuntu noble/main amd64 libavahi-common3 amd64 0.8-13ubuntu6 [23.3 kB]
+Get:145 http://archive.ubuntu.com/ubuntu noble/main amd64 libavahi-client3 amd64 0.8-13ubuntu6 [26.8 kB]
+Get:146 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcups2t64 amd64 2.4.7-1.2ubuntu7.3 [272 kB]
+Get:147 http://archive.ubuntu.com/ubuntu noble/main amd64 libgif7 amd64 5.2.2-1ubuntu1 [35.2 kB]
+Get:148 http://archive.ubuntu.com/ubuntu noble/main amd64 libgl1-amber-dri amd64 21.3.9-0ubuntu2 [4212 kB]
+Get:149 http://archive.ubuntu.com/ubuntu noble/main amd64 libgraphite2-3 amd64 1.3.14-2build1 [73.0 kB]
+Get:150 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz0b amd64 8.3.0-2build2 [469 kB]
+Get:151 http://archive.ubuntu.com/ubuntu noble/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [10.9 kB]
+Get:152 http://archive.ubuntu.com/ubuntu noble/main amd64 x11proto-dev all 2023.2-1 [602 kB]
+Get:153 http://archive.ubuntu.com/ubuntu noble/main amd64 libice-dev amd64 2:1.0.10-1build3 [51.0 kB]
+Get:154 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg-turbo8 amd64 2.1.5-2ubuntu2 [150 kB]
+Get:155 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg8 amd64 8c-2ubuntu11 [2148 B]
+Get:156 http://archive.ubuntu.com/ubuntu noble/main amd64 liblcms2-2 amd64 2.14-2build1 [161 kB]
+Get:157 http://archive.ubuntu.com/ubuntu noble/main amd64 libnspr4 amd64 2:4.35-1.1build1 [117 kB]
+Get:158 http://archive.ubuntu.com/ubuntu noble/main amd64 libnss3 amd64 2:3.98-1build1 [1445 kB]
+Get:159 http://archive.ubuntu.com/ubuntu noble/main amd64 libpcsclite1 amd64 2.0.3-1build1 [21.4 kB]
+Get:160 http://archive.ubuntu.com/ubuntu noble/main amd64 libpthread-stubs0-dev amd64 0.4-1build3 [4746 B]
+Get:161 http://archive.ubuntu.com/ubuntu noble/main amd64 libsm-dev amd64 2:1.2.3-1build3 [17.8 kB]
+Get:162 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-client0 amd64 1.22.0-2.1build1 [26.4 kB]
+Get:163 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau-dev amd64 1:1.0.9-1build6 [9570 B]
+Get:164 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu6 [26.5 kB]
+Get:165 http://archive.ubuntu.com/ubuntu noble/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]
+Get:166 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2 [85.8 kB]
+Get:167 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-dev amd64 2:1.8.7-1build1 [732 kB]
+Get:168 http://archive.ubuntu.com/ubuntu noble/main amd64 libxt-dev amd64 1:1.2.1-1.2build1 [394 kB]
+Get:169 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-vulkan-drivers amd64 24.0.9-0ubuntu0.1 [11.0 MB]
+Get:170 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 openjdk-11-jre-headless amd64 11.0.24+8-1ubuntu3~24.04.1 [42.2 MB]
+Get:171 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 openjdk-11-jre amd64 11.0.24+8-1ubuntu3~24.04.1 [209 kB]
+Get:172 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 openjdk-11-jdk-headless amd64 11.0.24+8-1ubuntu3~24.04.1 [73.6 MB]
+Get:173 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 openjdk-11-jdk amd64 11.0.24+8-1ubuntu3~24.04.1 [1334 kB]
+Fetched 212 MB in 26s (8108 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libpython3.12-minimal:amd64.
+(Reading database ... 4378 files and directories currently installed.)
+Preparing to unpack .../libpython3.12-minimal_3.12.3-1ubuntu0.2_amd64.deb ...
+Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.2) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.1) ...
+Selecting previously unselected package python3.12-minimal.
+Preparing to unpack .../python3.12-minimal_3.12.3-1ubuntu0.2_amd64.deb ...
+Unpacking python3.12-minimal (3.12.3-1ubuntu0.2) ...
+Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.2) ...
+Setting up libexpat1:amd64 (2.6.1-2ubuntu0.1) ...
+Setting up python3.12-minimal (3.12.3-1ubuntu0.2) ...
+Selecting previously unselected package python3-minimal.
+(Reading database ... 4697 files and directories currently installed.)
+Preparing to unpack .../0-python3-minimal_3.12.3-0ubuntu2_amd64.deb ...
+Unpacking python3-minimal (3.12.3-0ubuntu2) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../1-media-types_10.1.0_all.deb ...
+Unpacking media-types (10.1.0) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../2-netbase_6.4_all.deb ...
+Unpacking netbase (6.4) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../3-tzdata_2024a-3ubuntu1.1_all.deb ...
+Unpacking tzdata (2024a-3ubuntu1.1) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../4-readline-common_8.2-4build1_all.deb ...
+Unpacking readline-common (8.2-4build1) ...
+Selecting previously unselected package libreadline8t64:amd64.
+Preparing to unpack .../5-libreadline8t64_8.2-4build1_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by lib
+readline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by
+ libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by l
+ibreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-mergedby libreadline8t64'
+Unpacking libreadline8t64:amd64 (8.2-4build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../6-libsqlite3-0_3.45.1-1ubuntu2_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2) ...
+Selecting previously unselected package libpython3.12-stdlib:amd64.
+Preparing to unpack .../7-libpython3.12-stdlib_3.12.3-1ubuntu0.2_amd64.deb ...
+Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.2) ...
+Selecting previously unselected package python3.12.
+Preparing to unpack .../8-python3.12_3.12.3-1ubuntu0.2_amd64.deb ...
+Unpacking python3.12 (3.12.3-1ubuntu0.2) ...
+Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../9-libpython3-stdlib_3.12.3-0ubuntu2_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.12.3-0ubuntu2) ...
+Setting up python3-minimal (3.12.3-0ubuntu2) ...
+Selecting previously unselected package python3.
+(Reading database ... 5702 files and directories currently installed.)
+Preparing to unpack .../00-python3_3.12.3-0ubuntu2_amd64.deb ...
+Unpacking python3 (3.12.3-0ubuntu2) ...
+Selecting previously unselected package libapparmor1:amd64.
+Preparing to unpack .../01-libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.3_amd64.deb ...
+Unpacking libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.3) ...
+Selecting previously unselected package libargon2-1:amd64.
+Preparing to unpack .../02-libargon2-1_0~20190702+dfsg-4build1_amd64.deb ...
+Unpacking libargon2-1:amd64 (0~20190702+dfsg-4build1) ...
+Selecting previously unselected package libdevmapper1.02.1:amd64.
+Preparing to unpack .../03-libdevmapper1.02.1_2%3a1.02.185-3ubuntu3.1_amd64.deb ...
+Unpacking libdevmapper1.02.1:amd64 (2:1.02.185-3ubuntu3.1) ...
+Selecting previously unselected package libjson-c5:amd64.
+Preparing to unpack .../04-libjson-c5_0.17-1build1_amd64.deb ...
+Unpacking libjson-c5:amd64 (0.17-1build1) ...
+Selecting previously unselected package libcryptsetup12:amd64.
+Preparing to unpack .../05-libcryptsetup12_2%3a2.7.0-1ubuntu4.1_amd64.deb ...
+Unpacking libcryptsetup12:amd64 (2:2.7.0-1ubuntu4.1) ...
+Selecting previously unselected package libfdisk1:amd64.
+Preparing to unpack .../06-libfdisk1_2.39.3-9ubuntu6.1_amd64.deb ...
+Unpacking libfdisk1:amd64 (2.39.3-9ubuntu6.1) ...
+Selecting previously unselected package libkmod2:amd64.
+Preparing to unpack .../07-libkmod2_31+20240202-2ubuntu7_amd64.deb ...
+Unpacking libkmod2:amd64 (31+20240202-2ubuntu7) ...
+Selecting previously unselected package libsystemd-shared:amd64.
+Preparing to unpack .../08-libsystemd-shared_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking libsystemd-shared:amd64 (255.4-1ubuntu8.4) ...
+Selecting previously unselected package systemd-dev.
+Preparing to unpack .../09-systemd-dev_255.4-1ubuntu8.4_all.deb ...
+Unpacking systemd-dev (255.4-1ubuntu8.4) ...
+Selecting previously unselected package systemd.
+Preparing to unpack .../10-systemd_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking systemd (255.4-1ubuntu8.4) ...
+Setting up libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.3) ...
+Setting up libargon2-1:amd64 (0~20190702+dfsg-4build1) ...
+Setting up libdevmapper1.02.1:amd64 (2:1.02.185-3ubuntu3.1) ...
+Setting up libjson-c5:amd64 (0.17-1build1) ...
+Setting up libcryptsetup12:amd64 (2:2.7.0-1ubuntu4.1) ...
+Setting up libfdisk1:amd64 (2.39.3-9ubuntu6.1) ...
+Setting up libkmod2:amd64 (31+20240202-2ubuntu7) ...
+Setting up libsystemd-shared:amd64 (255.4-1ubuntu8.4) ...
+Setting up systemd-dev (255.4-1ubuntu8.4) ...
+Setting up systemd (255.4-1ubuntu8.4) ...
+Created symlink /etc/systemd/system/getty.target.wants/getty@tty1.service → /usr/lib/systemd/system/getty@.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/remote-fs.target → /usr/lib/systemd/system/remote-fs.target.
+Created symlink /etc/systemd/system/sysinit.target.wants/systemd-pstore.service → /usr/lib/systemd/system/systemd-pstore
+.service.
+Initializing machine ID from random generator.
+/usr/lib/tmpfiles.d/systemd-network.conf:10: Failed to resolve user 'systemd-network': No such process
+/usr/lib/tmpfiles.d/systemd-network.conf:11: Failed to resolve user 'systemd-network': No such process
+/usr/lib/tmpfiles.d/systemd-network.conf:12: Failed to resolve user 'systemd-network': No such process
+/usr/lib/tmpfiles.d/systemd-network.conf:13: Failed to resolve user 'systemd-network': No such process
+/usr/lib/tmpfiles.d/systemd.conf:22: Failed to resolve group 'systemd-journal': No such process
+/usr/lib/tmpfiles.d/systemd.conf:23: Failed to resolve group 'systemd-journal': No such process
+/usr/lib/tmpfiles.d/systemd.conf:28: Failed to resolve group 'systemd-journal': No such process
+/usr/lib/tmpfiles.d/systemd.conf:29: Failed to resolve group 'systemd-journal': No such process
+/usr/lib/tmpfiles.d/systemd.conf:30: Failed to resolve group 'systemd-journal': No such process
+Creating group 'systemd-journal' with GID 999.
+Creating group 'systemd-network' with GID 998.
+Creating user 'systemd-network' (systemd Network Management) with UID 998 and GID 998.
+Selecting previously unselected package systemd-sysv.
+(Reading database ... 6752 files and directories currently installed.)
+Preparing to unpack .../systemd-sysv_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking systemd-sysv (255.4-1ubuntu8.4) ...
+Selecting previously unselected package adduser.
+Preparing to unpack .../adduser_3.137ubuntu1_all.deb ...
+Unpacking adduser (3.137ubuntu1) ...
+Setting up adduser (3.137ubuntu1) ...
+Selecting previously unselected package openssl.
+(Reading database ... 6818 files and directories currently installed.)
+Preparing to unpack .../000-openssl_3.0.13-0ubuntu3.4_amd64.deb ...
+Unpacking openssl (3.0.13-0ubuntu3.4) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../001-ca-certificates_20240203_all.deb ...
+Unpacking ca-certificates (20240203) ...
+Selecting previously unselected package libdbus-1-3:amd64.
+Preparing to unpack .../002-libdbus-1-3_1.14.10-4ubuntu4.1_amd64.deb ...
+Unpacking libdbus-1-3:amd64 (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package dbus-bin.
+Preparing to unpack .../003-dbus-bin_1.14.10-4ubuntu4.1_amd64.deb ...
+Unpacking dbus-bin (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package dbus-session-bus-common.
+Preparing to unpack .../004-dbus-session-bus-common_1.14.10-4ubuntu4.1_all.deb ...
+Unpacking dbus-session-bus-common (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package dbus-daemon.
+Preparing to unpack .../005-dbus-daemon_1.14.10-4ubuntu4.1_amd64.deb ...
+Unpacking dbus-daemon (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package dbus-system-bus-common.
+Preparing to unpack .../006-dbus-system-bus-common_1.14.10-4ubuntu4.1_all.deb ...
+Unpacking dbus-system-bus-common (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package dbus.
+Preparing to unpack .../007-dbus_1.14.10-4ubuntu4.1_amd64.deb ...
+Unpacking dbus (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package libpam-systemd:amd64.
+Preparing to unpack .../008-libpam-systemd_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking libpam-systemd:amd64 (255.4-1ubuntu8.4) ...
+Selecting previously unselected package dbus-user-session.
+Preparing to unpack .../009-dbus-user-session_1.14.10-4ubuntu4.1_amd64.deb ...
+Unpacking dbus-user-session (1.14.10-4ubuntu4.1) ...
+Selecting previously unselected package dmsetup.
+Preparing to unpack .../010-dmsetup_2%3a1.02.185-3ubuntu3.1_amd64.deb ...
+Unpacking dmsetup (2:1.02.185-3ubuntu3.1) ...
+Selecting previously unselected package libglib2.0-0t64:amd64.
+Preparing to unpack .../011-libglib2.0-0t64_2.80.0-6ubuntu3.1_amd64.deb ...
+Unpacking libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.1) ...
+Selecting previously unselected package gir1.2-glib-2.0:amd64.
+Preparing to unpack .../012-gir1.2-glib-2.0_2.80.0-6ubuntu3.1_amd64.deb ...
+Unpacking gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.1) ...
+Selecting previously unselected package libgirepository-1.0-1:amd64.
+Preparing to unpack .../013-libgirepository-1.0-1_1.80.1-1_amd64.deb ...
+Unpacking libgirepository-1.0-1:amd64 (1.80.1-1) ...
+Selecting previously unselected package gir1.2-girepository-2.0:amd64.
+Preparing to unpack .../014-gir1.2-girepository-2.0_1.80.1-1_amd64.deb ...
+Unpacking gir1.2-girepository-2.0:amd64 (1.80.1-1) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../015-krb5-locales_1.20.1-6ubuntu2.1_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../016-libbsd0_0.12.1-1build1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.12.1-1build1) ...
+Selecting previously unselected package libelf1t64:amd64.
+Preparing to unpack .../017-libelf1t64_0.190-1.1build4_amd64.deb ...
+Unpacking libelf1t64:amd64 (0.190-1.1build4) ...
+Selecting previously unselected package libglib2.0-data.
+Preparing to unpack .../018-libglib2.0-data_2.80.0-6ubuntu3.1_all.deb ...
+Unpacking libglib2.0-data (2.80.0-6ubuntu3.1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../019-libkrb5support0_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../020-libk5crypto3_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../021-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../022-libkrb5-3_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../023-libgssapi-krb5-2_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libicu74:amd64.
+Preparing to unpack .../024-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+Selecting previously unselected package libnss-systemd:amd64.
+Preparing to unpack .../025-libnss-systemd_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking libnss-systemd:amd64 (255.4-1ubuntu8.4) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../026-libxml2_2.9.14+dfsg-1.3ubuntu3_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3) ...
+Selecting previously unselected package python3-dbus.
+Preparing to unpack .../027-python3-dbus_1.3.2-5build3_amd64.deb ...
+Unpacking python3-dbus (1.3.2-5build3) ...
+Selecting previously unselected package python3-gi.
+Preparing to unpack .../028-python3-gi_3.48.2-1_amd64.deb ...
+Unpacking python3-gi (3.48.2-1) ...
+Selecting previously unselected package networkd-dispatcher.
+Preparing to unpack .../029-networkd-dispatcher_2.2.4-1_all.deb ...
+Unpacking networkd-dispatcher (2.2.4-1) ...
+Selecting previously unselected package shared-mime-info.
+Preparing to unpack .../030-shared-mime-info_2.4-4_amd64.deb ...
+Unpacking shared-mime-info (2.4-4) ...
+Selecting previously unselected package systemd-resolved.
+Preparing to unpack .../031-systemd-resolved_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking systemd-resolved (255.4-1ubuntu8.4) ...
+Selecting previously unselected package systemd-timesyncd.
+Preparing to unpack .../032-systemd-timesyncd_255.4-1ubuntu8.4_amd64.deb ...
+Unpacking systemd-timesyncd (255.4-1ubuntu8.4) ...
+Selecting previously unselected package xdg-user-dirs.
+Preparing to unpack .../033-xdg-user-dirs_0.18-1build1_amd64.deb ...
+Unpacking xdg-user-dirs (0.18-1build1) ...
+Selecting previously unselected package libdrm-common.
+Preparing to unpack .../034-libdrm-common_2.4.120-2build1_all.deb ...
+Unpacking libdrm-common (2.4.120-2build1) ...
+Selecting previously unselected package libdrm2:amd64.
+Preparing to unpack .../035-libdrm2_2.4.120-2build1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.120-2build1) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../036-libedit2_3.1-20230828-1build1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20230828-1build1) ...
+Selecting previously unselected package libpng16-16t64:amd64.
+Preparing to unpack .../037-libpng16-16t64_1.6.43-5build1_amd64.deb ...
+Unpacking libpng16-16t64:amd64 (1.6.43-5build1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../038-libsensors-config_1%3a3.6.0-9build1_all.deb ...
+Unpacking libsensors-config (1:3.6.0-9build1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../039-libsensors5_1%3a3.6.0-9build1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.0-9build1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../040-libxau6_1%3a1.0.9-1build6_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build6) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../041-libxdmcp6_1%3a1.1.3-0ubuntu6_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../042-libxcb1_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../043-libx11-data_2%3a1.8.7-1build1_all.deb ...
+Unpacking libx11-data (2:1.8.7-1build1) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../044-libx11-6_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../045-libxext6_2%3a1.3.4-1build2_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build2) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../046-libxmuu1_2%3a1.1.3-3build2_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3build2) ...
+Selecting previously unselected package alsa-topology-conf.
+Preparing to unpack .../047-alsa-topology-conf_1.2.5.1-2_all.deb ...
+Unpacking alsa-topology-conf (1.2.5.1-2) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../048-libasound2-data_1.2.11-1build2_all.deb ...
+Unpacking libasound2-data (1.2.11-1build2) ...
+Selecting previously unselected package libasound2t64:amd64.
+Preparing to unpack .../049-libasound2t64_1.2.11-1build2_amd64.deb ...
+Unpacking libasound2t64:amd64 (1.2.11-1build2) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../050-alsa-ucm-conf_1.2.10-1ubuntu5_all.deb ...
+Unpacking alsa-ucm-conf (1.2.10-1ubuntu5) ...
+Selecting previously unselected package at-spi2-common.
+Preparing to unpack .../051-at-spi2-common_2.52.0-1build1_all.deb ...
+Unpacking at-spi2-common (2.52.0-1build1) ...
+Selecting previously unselected package libxi6:amd64.
+Preparing to unpack .../052-libxi6_2%3a1.8.1-1build1_amd64.deb ...
+Unpacking libxi6:amd64 (2:1.8.1-1build1) ...
+Selecting previously unselected package libatspi2.0-0t64:amd64.
+Preparing to unpack .../053-libatspi2.0-0t64_2.52.0-1build1_amd64.deb ...
+Unpacking libatspi2.0-0t64:amd64 (2.52.0-1build1) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../054-x11-common_1%3a7.7+23ubuntu3_all.deb ...
+Unpacking x11-common (1:7.7+23ubuntu3) ...
+Selecting previously unselected package libxtst6:amd64.
+Preparing to unpack .../055-libxtst6_2%3a1.2.3-1.1build1_amd64.deb ...
+Unpacking libxtst6:amd64 (2:1.2.3-1.1build1) ...
+Selecting previously unselected package libdconf1:amd64.
+Preparing to unpack .../056-libdconf1_0.40.0-4build2_amd64.deb ...
+Unpacking libdconf1:amd64 (0.40.0-4build2) ...
+Selecting previously unselected package dconf-service.
+Preparing to unpack .../057-dconf-service_0.40.0-4build2_amd64.deb ...
+Unpacking dconf-service (0.40.0-4build2) ...
+Selecting previously unselected package dconf-gsettings-backend:amd64.
+Preparing to unpack .../058-dconf-gsettings-backend_0.40.0-4build2_amd64.deb ...
+Unpacking dconf-gsettings-backend:amd64 (0.40.0-4build2) ...
+Selecting previously unselected package session-migration.
+Preparing to unpack .../059-session-migration_0.3.9build1_amd64.deb ...
+Unpacking session-migration (0.3.9build1) ...
+Selecting previously unselected package gsettings-desktop-schemas.
+Preparing to unpack .../060-gsettings-desktop-schemas_46.1-0ubuntu1_all.deb ...
+Unpacking gsettings-desktop-schemas (46.1-0ubuntu1) ...
+Selecting previously unselected package at-spi2-core.
+Preparing to unpack .../061-at-spi2-core_2.52.0-1build1_amd64.deb ...
+Unpacking at-spi2-core (2.52.0-1build1) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../062-ca-certificates-java_20240118_all.deb ...
+Unpacking ca-certificates-java (20240118) ...
+Selecting previously unselected package fonts-dejavu-mono.
+Preparing to unpack .../063-fonts-dejavu-mono_2.37-8_all.deb ...
+Unpacking fonts-dejavu-mono (2.37-8) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../064-fonts-dejavu-core_2.37-8_all.deb ...
+Unpacking fonts-dejavu-core (2.37-8) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../065-fontconfig-config_2.15.0-1.1ubuntu2_amd64.deb ...
+Unpacking fontconfig-config (2.15.0-1.1ubuntu2) ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../066-fonts-dejavu-extra_2.37-8_all.deb ...
+Unpacking fonts-dejavu-extra (2.37-8) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../067-java-common_0.75+exp1_all.deb ...
+Unpacking java-common (0.75+exp1) ...
+Selecting previously unselected package libatk1.0-0t64:amd64.
+Preparing to unpack .../068-libatk1.0-0t64_2.52.0-1build1_amd64.deb ...
+Unpacking libatk1.0-0t64:amd64 (2.52.0-1build1) ...
+Selecting previously unselected package libatk-bridge2.0-0t64:amd64.
+Preparing to unpack .../069-libatk-bridge2.0-0t64_2.52.0-1build1_amd64.deb ...
+Unpacking libatk-bridge2.0-0t64:amd64 (2.52.0-1build1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../070-libbrotli1_1.1.0-2build2_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../071-libfreetype6_2.13.2+dfsg-1build3_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.13.2+dfsg-1build3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../072-libfontconfig1_2.15.0-1.1ubuntu2_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.15.0-1.1ubuntu2) ...
+Selecting previously unselected package libglvnd0:amd64.
+Preparing to unpack .../073-libglvnd0_1.7.0-1build1_amd64.deb ...
+Unpacking libglvnd0:amd64 (1.7.0-1build1) ...
+Selecting previously unselected package libglapi-mesa:amd64.
+Preparing to unpack .../074-libglapi-mesa_24.0.9-0ubuntu0.1_amd64.deb ...
+Unpacking libglapi-mesa:amd64 (24.0.9-0ubuntu0.1) ...
+Selecting previously unselected package libx11-xcb1:amd64.
+Preparing to unpack .../075-libx11-xcb1_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-xcb1:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package libxcb-dri2-0:amd64.
+Preparing to unpack .../076-libxcb-dri2-0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-dri2-0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-dri3-0:amd64.
+Preparing to unpack .../077-libxcb-dri3-0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-dri3-0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-glx0:amd64.
+Preparing to unpack .../078-libxcb-glx0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-glx0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-present0:amd64.
+Preparing to unpack .../079-libxcb-present0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-present0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-randr0:amd64.
+Preparing to unpack .../080-libxcb-randr0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-randr0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-shm0:amd64.
+Preparing to unpack .../081-libxcb-shm0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-shm0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-sync1:amd64.
+Preparing to unpack .../082-libxcb-sync1_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-sync1:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-xfixes0:amd64.
+Preparing to unpack .../083-libxcb-xfixes0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-xfixes0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxfixes3:amd64.
+Preparing to unpack .../084-libxfixes3_1%3a6.0.0-2build1_amd64.deb ...
+Unpacking libxfixes3:amd64 (1:6.0.0-2build1) ...
+Selecting previously unselected package libxshmfence1:amd64.
+Preparing to unpack .../085-libxshmfence1_1.3-1build5_amd64.deb ...
+Unpacking libxshmfence1:amd64 (1.3-1build5) ...
+Selecting previously unselected package libxxf86vm1:amd64.
+Preparing to unpack .../086-libxxf86vm1_1%3a1.1.4-1build4_amd64.deb ...
+Unpacking libxxf86vm1:amd64 (1:1.1.4-1build4) ...
+Selecting previously unselected package libvulkan1:amd64.
+Preparing to unpack .../087-libvulkan1_1.3.275.0-1build1_amd64.deb ...
+Unpacking libvulkan1:amd64 (1.3.275.0-1build1) ...
+Selecting previously unselected package libdrm-amdgpu1:amd64.
+Preparing to unpack .../088-libdrm-amdgpu1_2.4.120-2build1_amd64.deb ...
+Unpacking libdrm-amdgpu1:amd64 (2.4.120-2build1) ...
+Selecting previously unselected package libpciaccess0:amd64.
+Preparing to unpack .../089-libpciaccess0_0.17-3build1_amd64.deb ...
+Unpacking libpciaccess0:amd64 (0.17-3build1) ...
+Selecting previously unselected package libdrm-intel1:amd64.
+Preparing to unpack .../090-libdrm-intel1_2.4.120-2build1_amd64.deb ...
+Unpacking libdrm-intel1:amd64 (2.4.120-2build1) ...
+Selecting previously unselected package libdrm-nouveau2:amd64.
+Preparing to unpack .../091-libdrm-nouveau2_2.4.120-2build1_amd64.deb ...
+Unpacking libdrm-nouveau2:amd64 (2.4.120-2build1) ...
+Selecting previously unselected package libdrm-radeon1:amd64.
+Preparing to unpack .../092-libdrm-radeon1_2.4.120-2build1_amd64.deb ...
+Unpacking libdrm-radeon1:amd64 (2.4.120-2build1) ...
+Selecting previously unselected package libllvm17t64:amd64.
+Preparing to unpack .../093-libllvm17t64_1%3a17.0.6-9ubuntu1_amd64.deb ...
+Unpacking libllvm17t64:amd64 (1:17.0.6-9ubuntu1) ...
+Selecting previously unselected package libgl1-mesa-dri:amd64.
+Preparing to unpack .../094-libgl1-mesa-dri_24.0.9-0ubuntu0.1_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (24.0.9-0ubuntu0.1) ...
+Selecting previously unselected package libglx-mesa0:amd64.
+Preparing to unpack .../095-libglx-mesa0_24.0.9-0ubuntu0.1_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (24.0.9-0ubuntu0.1) ...
+Selecting previously unselected package libglx0:amd64.
+Preparing to unpack .../096-libglx0_1.7.0-1build1_amd64.deb ...
+Unpacking libglx0:amd64 (1.7.0-1build1) ...
+Selecting previously unselected package libgl1:amd64.
+Preparing to unpack .../097-libgl1_1.7.0-1build1_amd64.deb ...
+Unpacking libgl1:amd64 (1.7.0-1build1) ...
+Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../098-libice6_2%3a1.0.10-1build3_amd64.deb ...
+Unpacking libice6:amd64 (2:1.0.10-1build3) ...
+Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../099-libsm6_2%3a1.2.3-1build3_amd64.deb ...
+Unpacking libsm6:amd64 (2:1.2.3-1build3) ...
+Selecting previously unselected package libxt6t64:amd64.
+Preparing to unpack .../100-libxt6t64_1%3a1.2.1-1.2build1_amd64.deb ...
+Unpacking libxt6t64:amd64 (1:1.2.1-1.2build1) ...
+Selecting previously unselected package libxmu6:amd64.
+Preparing to unpack .../101-libxmu6_2%3a1.1.3-3build2_amd64.deb ...
+Unpacking libxmu6:amd64 (2:1.1.3-3build2) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../102-libxpm4_1%3a3.5.17-1build2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.17-1build2) ...
+Selecting previously unselected package libxaw7:amd64.
+Preparing to unpack .../103-libxaw7_2%3a1.0.14-1build2_amd64.deb ...
+Unpacking libxaw7:amd64 (2:1.0.14-1build2) ...
+Selecting previously unselected package libxcb-shape0:amd64.
+Preparing to unpack .../104-libxcb-shape0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-shape0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcomposite1:amd64.
+Preparing to unpack .../105-libxcomposite1_1%3a0.4.5-1build3_amd64.deb ...
+Unpacking libxcomposite1:amd64 (1:0.4.5-1build3) ...
+Selecting previously unselected package libxrender1:amd64.
+Preparing to unpack .../106-libxrender1_1%3a0.9.10-1.1build1_amd64.deb ...
+Unpacking libxrender1:amd64 (1:0.9.10-1.1build1) ...
+Selecting previously unselected package libxft2:amd64.
+Preparing to unpack .../107-libxft2_2.3.6-1build1_amd64.deb ...
+Unpacking libxft2:amd64 (2.3.6-1build1) ...
+Selecting previously unselected package libxinerama1:amd64.
+Preparing to unpack .../108-libxinerama1_2%3a1.1.4-3build1_amd64.deb ...
+Unpacking libxinerama1:amd64 (2:1.1.4-3build1) ...
+Selecting previously unselected package libxkbfile1:amd64.
+Preparing to unpack .../109-libxkbfile1_1%3a1.1.0-1build4_amd64.deb ...
+Unpacking libxkbfile1:amd64 (1:1.1.0-1build4) ...
+Selecting previously unselected package libxrandr2:amd64.
+Preparing to unpack .../110-libxrandr2_2%3a1.5.2-2build1_amd64.deb ...
+Unpacking libxrandr2:amd64 (2:1.5.2-2build1) ...
+Selecting previously unselected package libxv1:amd64.
+Preparing to unpack .../111-libxv1_2%3a1.0.11-1.1build1_amd64.deb ...
+Unpacking libxv1:amd64 (2:1.0.11-1.1build1) ...
+Selecting previously unselected package libxxf86dga1:amd64.
+Preparing to unpack .../112-libxxf86dga1_2%3a1.1.5-1build1_amd64.deb ...
+Unpacking libxxf86dga1:amd64 (2:1.1.5-1build1) ...
+Selecting previously unselected package x11-utils.
+Preparing to unpack .../113-x11-utils_7.7+6build2_amd64.deb ...
+Unpacking x11-utils (7.7+6build2) ...
+Selecting previously unselected package libatk-wrapper-java.
+Preparing to unpack .../114-libatk-wrapper-java_0.40.0-3build2_all.deb ...
+Unpacking libatk-wrapper-java (0.40.0-3build2) ...
+Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+Preparing to unpack .../115-libatk-wrapper-java-jni_0.40.0-3build2_amd64.deb ...
+Unpacking libatk-wrapper-java-jni:amd64 (0.40.0-3build2) ...
+Selecting previously unselected package libavahi-common-data:amd64.
+Preparing to unpack .../116-libavahi-common-data_0.8-13ubuntu6_amd64.deb ...
+Unpacking libavahi-common-data:amd64 (0.8-13ubuntu6) ...
+Selecting previously unselected package libavahi-common3:amd64.
+Preparing to unpack .../117-libavahi-common3_0.8-13ubuntu6_amd64.deb ...
+Unpacking libavahi-common3:amd64 (0.8-13ubuntu6) ...
+Selecting previously unselected package libavahi-client3:amd64.
+Preparing to unpack .../118-libavahi-client3_0.8-13ubuntu6_amd64.deb ...
+Unpacking libavahi-client3:amd64 (0.8-13ubuntu6) ...
+Selecting previously unselected package libcups2t64:amd64.
+Preparing to unpack .../119-libcups2t64_2.4.7-1.2ubuntu7.3_amd64.deb ...
+Unpacking libcups2t64:amd64 (2.4.7-1.2ubuntu7.3) ...
+Selecting previously unselected package libgif7:amd64.
+Preparing to unpack .../120-libgif7_5.2.2-1ubuntu1_amd64.deb ...
+Unpacking libgif7:amd64 (5.2.2-1ubuntu1) ...
+Selecting previously unselected package libgl1-amber-dri:amd64.
+Preparing to unpack .../121-libgl1-amber-dri_21.3.9-0ubuntu2_amd64.deb ...
+Unpacking libgl1-amber-dri:amd64 (21.3.9-0ubuntu2) ...
+Selecting previously unselected package libgraphite2-3:amd64.
+Preparing to unpack .../122-libgraphite2-3_1.3.14-2build1_amd64.deb ...
+Unpacking libgraphite2-3:amd64 (1.3.14-2build1) ...
+Selecting previously unselected package libharfbuzz0b:amd64.
+Preparing to unpack .../123-libharfbuzz0b_8.3.0-2build2_amd64.deb ...
+Unpacking libharfbuzz0b:amd64 (8.3.0-2build2) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../124-xorg-sgml-doctools_1%3a1.11-1.1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1.1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../125-x11proto-dev_2023.2-1_all.deb ...
+Unpacking x11proto-dev (2023.2-1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../126-libice-dev_2%3a1.0.10-1build3_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-1build3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../127-libjpeg-turbo8_2.1.5-2ubuntu2_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.5-2ubuntu2) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../128-libjpeg8_8c-2ubuntu11_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu11) ...
+Selecting previously unselected package liblcms2-2:amd64.
+Preparing to unpack .../129-liblcms2-2_2.14-2build1_amd64.deb ...
+Unpacking liblcms2-2:amd64 (2.14-2build1) ...
+Selecting previously unselected package libnspr4:amd64.
+Preparing to unpack .../130-libnspr4_2%3a4.35-1.1build1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.35-1.1build1) ...
+Selecting previously unselected package libnss3:amd64.
+Preparing to unpack .../131-libnss3_2%3a3.98-1build1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.98-1build1) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../132-libpcsclite1_2.0.3-1build1_amd64.deb ...
+Unpacking libpcsclite1:amd64 (2.0.3-1build1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../133-libpthread-stubs0-dev_0.4-1build3_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1build3) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../134-libsm-dev_2%3a1.2.3-1build3_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1build3) ...
+Selecting previously unselected package libwayland-client0:amd64.
+Preparing to unpack .../135-libwayland-client0_1.22.0-2.1build1_amd64.deb ...
+Unpacking libwayland-client0:amd64 (1.22.0-2.1build1) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../136-libxau-dev_1%3a1.0.9-1build6_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-1build6) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../137-libxdmcp-dev_1%3a1.1.3-0ubuntu6_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.3-0ubuntu6) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../138-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../139-libxcb1-dev_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../140-libx11-dev_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../141-libxt-dev_1%3a1.2.1-1.2build1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.2.1-1.2build1) ...
+Selecting previously unselected package mesa-vulkan-drivers:amd64.
+Preparing to unpack .../142-mesa-vulkan-drivers_24.0.9-0ubuntu0.1_amd64.deb ...
+Unpacking mesa-vulkan-drivers:amd64 (24.0.9-0ubuntu0.1) ...
+Selecting previously unselected package openjdk-11-jre-headless:amd64.
+Preparing to unpack .../143-openjdk-11-jre-headless_11.0.24+8-1ubuntu3~24.04.1_amd64.deb ...
+Unpacking openjdk-11-jre-headless:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+Selecting previously unselected package openjdk-11-jre:amd64.
+Preparing to unpack .../144-openjdk-11-jre_11.0.24+8-1ubuntu3~24.04.1_amd64.deb ...
+Unpacking openjdk-11-jre:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+Selecting previously unselected package openjdk-11-jdk-headless:amd64.
+Preparing to unpack .../145-openjdk-11-jdk-headless_11.0.24+8-1ubuntu3~24.04.1_amd64.deb ...
+Unpacking openjdk-11-jdk-headless:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+Selecting previously unselected package openjdk-11-jdk:amd64.
+Preparing to unpack .../146-openjdk-11-jdk_11.0.24+8-1ubuntu3~24.04.1_amd64.deb ...
+Unpacking openjdk-11-jdk:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+Setting up media-types (10.1.0) ...
+Setting up libgraphite2-3:amd64 (1.3.14-2build1) ...
+Setting up liblcms2-2:amd64 (2.14-2build1) ...
+Setting up libpciaccess0:amd64 (0.17-3build1) ...
+Setting up systemd-sysv (255.4-1ubuntu8.4) ...
+Setting up libxau6:amd64 (1:1.0.9-1build6) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up java-common (0.75+exp1) ...
+Setting up xdg-user-dirs (0.18-1build1) ...
+Setting up libglvnd0:amd64 (1.7.0-1build1) ...
+Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2) ...
+Setting up x11-common (1:7.7+23ubuntu3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/D
+ebconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checke
+d: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.
+38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/lo
+cal/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libsensors-config (1:3.6.0-9build1) ...
+Setting up libnss-systemd:amd64 (255.4-1ubuntu8.4) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.1) ...
+Setting up libpthread-stubs0-dev:amd64 (0.4-1build3) ...
+Setting up libelf1t64:amd64 (0.190-1.1build4) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up tzdata (2024a-3ubuntu1.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/D
+ebconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checke
+d: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.
+38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/lo
+cal/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration questions will narrow this down by
+presenting a list of cities, representing the time zones in which they are located.
+
+  1. Africa   3. Antarctica  5. Asia      7. Australia  9. Indian    11. Etc
+  2. America  4. Arctic      6. Atlantic  8. Europe     10. Pacific
+Geographic area: 2
+
+Please select the city or region corresponding to your time zone.
+
+  1. Adak                     40. Coral_Harbour         79. Juneau                   118. Port-au-Prince
+  2. Anchorage                41. Costa_Rica            80. Kentucky/Louisville      119. Port_of_Spain
+  3. Anguilla                 42. Creston               81. Kentucky/Monticello      120. Porto_Acre
+  4. Antigua                  43. Cuiaba                82. Kralendijk               121. Porto_Velho
+  5. Araguaina                44. Curacao               83. La_Paz                   122. Puerto_Rico
+  6. Argentina/Buenos_Aires   45. Danmarkshavn          84. Lima                     123. Punta_Arenas
+  7. Argentina/Catamarca      46. Dawson                85. Los_Angeles              124. Rainy_River
+  8. Argentina/Cordoba        47. Dawson_Creek          86. Lower_Princes            125. Rankin_Inlet
+  9. Argentina/Jujuy          48. Denver                87. Maceio                   126. Recife
+  10. Argentina/La_Rioja      49. Detroit               88. Managua                  127. Regina
+  11. Argentina/Mendoza       50. Dominica              89. Manaus                   128. Resolute
+  12. Argentina/Rio_Gallegos  51. Edmonton              90. Marigot                  129. Rio_Branco
+  13. Argentina/Salta         52. Eirunepe              91. Martinique               130. Santa_Isabel
+  14. Argentina/San_Juan      53. El_Salvador           92. Matamoros                131. Santarem
+  15. Argentina/San_Luis      54. Ensenada              93. Mazatlan                 132. Santiago
+  16. Argentina/Tucuman       55. Fort_Nelson           94. Menominee                133. Santo_Domingo
+  17. Argentina/Ushuaia       56. Fortaleza             95. Merida                   134. Sao_Paulo
+  18. Aruba                   57. Glace_Bay             96. Metlakatla               135. Scoresbysund
+  19. Asuncion                58. Goose_Bay             97. Mexico_City              136. Shiprock
+  20. Atikokan                59. Grand_Turk            98. Miquelon                 137. Sitka
+  21. Atka                    60. Grenada               99. Moncton                  138. St_Barthelemy
+  22. Bahia                   61. Guadeloupe            100. Monterrey               139. St_Johns
+  23. Bahia_Banderas          62. Guatemala             101. Montevideo              140. St_Kitts
+  24. Barbados                63. Guayaquil             102. Montreal                141. St_Lucia
+[More] 85
+
+  25. Belem                   64. Guyana                103. Montserrat              142. St_Thomas
+  26. Belize                  65. Halifax               104. Nassau                  143. St_Vincent
+  27. Blanc-Sablon            66. Havana                105. New_York                144. Swift_Current
+  28. Boa_Vista               67. Hermosillo            106. Nipigon                 145. Tegucigalpa
+  29. Bogota                  68. Indiana/Indianapolis  107. Nome                    146. Thule
+  30. Boise                   69. Indiana/Knox          108. Noronha                 147. Thunder_Bay
+  31. Cambridge_Bay           70. Indiana/Marengo       109. North_Dakota/Beulah     148. Tijuana
+  32. Campo_Grande            71. Indiana/Petersburg    110. North_Dakota/Center     149. Toronto
+  33. Cancun                  72. Indiana/Tell_City     111. North_Dakota/New_Salem  150. Tortola
+  34. Caracas                 73. Indiana/Vevay         112. Nuuk                    151. Vancouver
+  35. Cayenne                 74. Indiana/Vincennes     113. Ojinaga                 152. Virgin
+  36. Cayman                  75. Indiana/Winamac       114. Panama                  153. Whitehorse
+  37. Chicago                 76. Inuvik                115. Pangnirtung             154. Winnipeg
+  38. Chihuahua               77. Iqaluit               116. Paramaribo              155. Yakutat
+  39. Ciudad_Juarez           78. Jamaica               117. Phoenix                 156. Yellowknife
+Time zone: 85
+
+
+Current default time zone: 'America/Los_Angeles'
+Local time is now:      Fri Oct  4 11:50:40 PDT 2024.
+Universal Time is now:  Fri Oct  4 18:50:40 UTC 2024.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libasound2-data (1.2.11-1build2) ...
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.1) ...
+Setting up libglib2.0-data (2.80.0-6ubuntu3.1) ...
+Setting up libasound2t64:amd64 (1.2.11-1build2) ...
+Setting up libx11-data (2:1.8.7-1build1) ...
+Setting up libnspr4:amd64 (2:4.35-1.1build1) ...
+Setting up libavahi-common-data:amd64 (0.8-13ubuntu6) ...
+Setting up libdbus-1-3:amd64 (1.14.10-4ubuntu4.1) ...
+Setting up fonts-dejavu-mono (2.37-8) ...
+Setting up libpng16-16t64:amd64 (1.6.43-5build1) ...
+Setting up systemd-timesyncd (255.4-1ubuntu8.4) ...
+Creating group 'systemd-timesync' with GID 997.
+Creating user 'systemd-timesync' (systemd Time Synchronization) with UID 997 and GID 997.
+Created symlink /etc/systemd/system/dbus-org.freedesktop.timesync1.service → /usr/lib/systemd/system/systemd-timesyncd.service.
+Created symlink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service → /usr/lib/systemd/system/systemd-tim
+esyncd.service.
+Setting up fonts-dejavu-core (2.37-8) ...
+Setting up libpcsclite1:amd64 (2.0.3-1build1) ...
+Setting up gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.1) ...
+Setting up libsensors5:amd64 (1:3.6.0-9build1) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.5-2ubuntu2) ...
+Setting up libglapi-mesa:amd64 (24.0.9-0ubuntu0.1) ...
+Setting up libvulkan1:amd64 (1.3.275.0-1build1) ...
+Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+Setting up libgif7:amd64 (5.2.2-1ubuntu1) ...
+Setting up fonts-dejavu-extra (2.37-8) ...
+Setting up alsa-topology-conf (1.2.5.1-2) ...
+Setting up dmsetup (2:1.02.185-3ubuntu3.1) ...
+Setting up libxshmfence1:amd64 (1.3-1build5) ...
+Setting up at-spi2-common (2.52.0-1build1) ...
+Setting up dbus-session-bus-common (1.14.10-4ubuntu4.1) ...
+Setting up libgirepository-1.0-1:amd64 (1.80.1-1) ...
+Setting up xorg-sgml-doctools (1:1.11-1.1) ...
+Setting up netbase (6.4) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up dbus-system-bus-common (1.14.10-4ubuntu4.1) ...
+Setting up openssl (3.0.13-0ubuntu3.4) ...
+Setting up libbsd0:amd64 (0.12.1-1build1) ...
+Setting up libdrm-common (2.4.120-2build1) ...
+Setting up readline-common (8.2-4build1) ...
+Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3) ...
+Setting up dbus-bin (1.14.10-4ubuntu4.1) ...
+Setting up libwayland-client0:amd64 (1.22.0-2.1build1) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu11) ...
+Setting up x11proto-dev (2023.2-1) ...
+Setting up libice6:amd64 (2:1.0.10-1build3) ...
+Setting up session-migration (0.3.9build1) ...
+Created symlink /etc/systemd/user/graphical-session-pre.target.wants/session-migration.service → /usr/lib/systemd/user/session-migration.service.
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...
+Setting up libxcb1:amd64 (1.15-1ubuntu2) ...
+Setting up libxcb-xfixes0:amd64 (1.15-1ubuntu2) ...
+Setting up libatk1.0-0t64:amd64 (2.52.0-1build1) ...
+Setting up libxau-dev:amd64 (1:1.0.9-1build6) ...
+Setting up libice-dev:amd64 (2:1.0.10-1build3) ...
+Setting up alsa-ucm-conf (1.2.10-1ubuntu5) ...
+Setting up fontconfig-config (2.15.0-1.1ubuntu2) ...
+Setting up libxcb-glx0:amd64 (1.15-1ubuntu2) ...
+Setting up libedit2:amd64 (3.1-20230828-1build1) ...
+Setting up libxcb-shape0:amd64 (1.15-1ubuntu2) ...
+Setting up libavahi-common3:amd64 (0.8-13ubuntu6) ...
+Setting up libnss3:amd64 (2:3.98-1build1) ...
+Setting up libxcb-shm0:amd64 (1.15-1ubuntu2) ...
+Setting up dbus-daemon (1.14.10-4ubuntu4.1) ...
+Setting up libxcb-present0:amd64 (1.15-1ubuntu2) ...
+Setting up libdconf1:amd64 (0.40.0-4build2) ...
+Setting up ca-certificates (20240203) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/D
+ebconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checke
+d: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.
+38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/lo
+cal/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+146 added, 0 removed; done.
+Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu6) ...
+Setting up libllvm17t64:amd64 (1:17.0.6-9ubuntu1) ...
+Setting up libfreetype6:amd64 (2.13.2+dfsg-1build3) ...
+Setting up libxcb-sync1:amd64 (1.15-1ubuntu2) ...
+Setting up gir1.2-girepository-2.0:amd64 (1.80.1-1) ...
+Setting up dbus (1.14.10-4ubuntu4.1) ...
+Setting up shared-mime-info (2.4-4) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up libreadline8t64:amd64 (8.2-4build1) ...
+Setting up libxcb-dri2-0:amd64 (1.15-1ubuntu2) ...
+Setting up libdrm2:amd64 (2.4.120-2build1) ...
+Setting up libxcb-randr0:amd64 (1.15-1ubuntu2) ...
+Setting up libpam-systemd:amd64 (255.4-1ubuntu8.4) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/D
+ebconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checke
+d: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.
+38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/lo
+cal/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Setting up libx11-6:amd64 (2:1.8.7-1build1) ...
+Setting up libharfbuzz0b:amd64 (8.3.0-2build2) ...
+Setting up libfontconfig1:amd64 (2.15.0-1.1ubuntu2) ...
+Setting up libxkbfile1:amd64 (1:1.1.0-1build4) ...
+Setting up ca-certificates-java (20240118) ...
+No JRE found. Skipping Java certificates setup.
+Setting up libxcomposite1:amd64 (1:0.4.5-1build3) ...
+Setting up libsm6:amd64 (2:1.2.3-1build3) ...
+Setting up libavahi-client3:amd64 (0.8-13ubuntu6) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3build2) ...
+Setting up systemd-resolved (255.4-1ubuntu8.4) ...
+Converting /etc/resolv.conf to a symlink to /run/systemd/resolve/stub-resolv.conf...
+mv: cannot move '/etc/resolv.conf' to '/etc/.resolv.conf.systemd-resolved.bak': Device or resource busy
+Cannot take a backup of /etc/resolv.conf.
+ln: failed to create symbolic link '/etc/resolv.conf': Device or resource busy
+Cannot install symlink from /etc/resolv.conf to ../run/systemd/resolve/stub-resolv.conf
+Creating group 'systemd-resolve' with GID 996.
+Creating user 'systemd-resolve' (systemd Resolver) with UID 996 and GID 996.
+Created symlink /etc/systemd/system/dbus-org.freedesktop.resolve1.service → /usr/lib/systemd/system/systemd-resolved.service.
+Created symlink /etc/systemd/system/sysinit.target.wants/systemd-resolved.service → /usr/lib/systemd/system/systemd-reso
+lved.service.
+Setting up libdrm-amdgpu1:amd64 (2.4.120-2build1) ...
+Setting up libxcb-dri3-0:amd64 (1.15-1ubuntu2) ...
+Setting up libx11-xcb1:amd64 (2:1.8.7-1build1) ...
+Setting up libdrm-nouveau2:amd64 (2.4.120-2build1) ...
+Setting up libxcb1-dev:amd64 (1.15-1ubuntu2) ...
+Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.2) ...
+Setting up libxpm4:amd64 (1:3.5.17-1build2) ...
+Setting up libxrender1:amd64 (1:0.9.10-1.1build1) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1build3) ...
+Setting up libdrm-radeon1:amd64 (2.4.120-2build1) ...
+Setting up python3.12 (3.12.3-1ubuntu0.2) ...
+Setting up libdrm-intel1:amd64 (2.4.120-2build1) ...
+Setting up openjdk-11-jre-headless:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in automode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregist
+ry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in automode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in
+ auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up libgl1-mesa-dri:amd64 (24.0.9-0ubuntu0.1) ...
+Setting up libx11-dev:amd64 (2:1.8.7-1build1) ...
+Setting up libxext6:amd64 (2:1.3.4-1build2) ...
+Setting up libxxf86vm1:amd64 (1:1.1.4-1build4) ...
+Setting up dbus-user-session (1.14.10-4ubuntu4.1) ...
+Setting up libxfixes3:amd64 (1:6.0.0-2build1) ...
+Setting up libxinerama1:amd64 (2:1.1.4-3build1) ...
+Setting up libxt6t64:amd64 (1:1.2.1-1.2build1) ...
+Setting up libxv1:amd64 (2:1.0.11-1.1build1) ...
+Setting up libxrandr2:amd64 (2:1.5.2-2build1) ...
+Setting up libcups2t64:amd64 (2.4.7-1.2ubuntu7.3) ...
+Setting up libpython3-stdlib:amd64 (3.12.3-0ubuntu2) ...
+Setting up libgl1-amber-dri:amd64 (21.3.9-0ubuntu2) ...
+Setting up libxft2:amd64 (2.3.6-1build1) ...
+Setting up libxmu6:amd64 (2:1.1.3-3build2) ...
+Setting up libglx-mesa0:amd64 (24.0.9-0ubuntu0.1) ...
+Setting up libxi6:amd64 (2:1.8.1-1build1) ...
+Setting up libglx0:amd64 (1.7.0-1build1) ...
+Setting up libxtst6:amd64 (2:1.2.3-1.1build1) ...
+Setting up libxxf86dga1:amd64 (2:1.1.5-1build1) ...
+Setting up dconf-service (0.40.0-4build2) ...
+Setting up python3 (3.12.3-0ubuntu2) ...
+running python rtupdate hooks for python3.12...
+running python post-rtupdate hooks for python3.12...
+Setting up libxaw7:amd64 (2:1.0.14-1build2) ...
+Setting up libgl1:amd64 (1.7.0-1build1) ...
+Setting up libxt-dev:amd64 (1:1.2.1-1.2build1) ...
+Setting up libatspi2.0-0t64:amd64 (2.52.0-1build1) ...
+Setting up python3-gi (3.48.2-1) ...
+Setting up x11-utils (7.7+6build2) ...
+Setting up libatk-wrapper-java (0.40.0-3build2) ...
+Setting up libatk-bridge2.0-0t64:amd64 (2.52.0-1build1) ...
+Setting up mesa-vulkan-drivers:amd64 (24.0.9-0ubuntu0.1) ...
+Setting up python3-dbus (1.3.2-5build3) ...
+Setting up dconf-gsettings-backend:amd64 (0.40.0-4build2) ...
+Setting up libatk-wrapper-java-jni:amd64 (0.40.0-3build2) ...
+Setting up networkd-dispatcher (2.2.4-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/networkd-dispatcher.service → /usr/lib/systemd/system/networkd-dispatcher.service.
+Setting up gsettings-desktop-schemas (46.1-0ubuntu1) ...
+Setting up at-spi2-core (2.52.0-1build1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Processing triggers for ca-certificates-java (20240118) ...
+Adding debian:ACCVRAIZ1.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:BJCA_Global_Root_CA1.pem
+Adding debian:BJCA_Global_Root_CA2.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:Certigna.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Izenpe.com.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+done.
+Setting up openjdk-11-jdk-headless:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in
+ auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in automode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in
+ auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mod
+e
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript)
+ in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mod
+e
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mod
+e
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jaotc to provide /usr/bin/jaotc (jaotc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up openjdk-11-jre:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+Setting up openjdk-11-jdk:amd64 (11.0.24+8-1ubuntu3~24.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+Processing triggers for ca-certificates (20240203) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Processing triggers for ca-certificates-java (20240118) ...
+done.
+root@0c5468e9a031:/# java -version
+openjdk version "11.0.24" 2024-07-16
+OpenJDK Runtime Environment (build 11.0.24+8-post-Ubuntu-1ubuntu324.04.1)
+OpenJDK 64-Bit Server VM (build 11.0.24+8-post-Ubuntu-1ubuntu324.04.1, mixed mode, sharing)
+root@0c5468e9a031:/# apt update
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@0c5468e9a031:/# apt install -y maven
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libaopalliance-java libapache-pom-java libatinject-jsr330-api-java libcdi-api-java libcommons-cli-java
+  libcommons-io-java libcommons-lang3-java libcommons-parent-java liberror-prone-java
+  libgeronimo-annotation-1.3-spec-java libgeronimo-interceptor-3.0-spec-java libguava-java libguice-java libjansi-java
+  libjsr305-java libmaven-parent-java libmaven-resolver-java libmaven-shared-utils-java libmaven3-core-java
+  libplexus-cipher-java libplexus-classworlds-java libplexus-component-annotations-java libplexus-interpolation-java
+  libplexus-sec-dispatcher-java libplexus-utils2-java libsisu-inject-java libsisu-plexus-java libslf4j-java
+  libwagon-file-java libwagon-http-shaded-java libwagon-provider-api-java
+Suggested packages:
+  libatinject-jsr330-api-java-doc libel-api-java libcommons-io-java-doc libasm-java libcglib-java libjsr305-java-doc
+  libmaven-shared-utils-java-doc liblogback-java libplexus-utils2-java-doc junit4 testng libcommons-logging-java
+  liblog4j1.2-java
+The following NEW packages will be installed:
+  libaopalliance-java libapache-pom-java libatinject-jsr330-api-java libcdi-api-java libcommons-cli-java
+  libcommons-io-java libcommons-lang3-java libcommons-parent-java liberror-prone-java
+  libgeronimo-annotation-1.3-spec-java libgeronimo-interceptor-3.0-spec-java libguava-java libguice-java libjansi-java
+  libjsr305-java libmaven-parent-java libmaven-resolver-java libmaven-shared-utils-java libmaven3-core-java
+  libplexus-cipher-java libplexus-classworlds-java libplexus-component-annotations-java libplexus-interpolation-java
+  libplexus-sec-dispatcher-java libplexus-utils2-java libsisu-inject-java libsisu-plexus-java libslf4j-java
+  libwagon-file-java libwagon-http-shaded-java libwagon-provider-api-java maven
+0 upgraded, 32 newly installed, 0 to remove and 2 not upgraded.
+Need to get 10.1 MB of archives.
+After this operation, 13.1 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 libapache-pom-java all 29-2 [5284 B]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libatinject-jsr330-api-java all 1.0+ds1-5 [5348 B]
+Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libgeronimo-interceptor-3.0-spec-java all 1.0.1-4fakesync [8616 B]
+Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcdi-api-java all 1.2-3 [54.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-cli-java all 1.6.0-1 [59.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-parent-java all 56-1 [10.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-io-java all 2.11.0-2 [297 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-lang3-java all 3.14.0-1 [586 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 libjsr305-java all 0.1~+svn49-11 [27.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 libguava-java all 32.0.1-1 [2692 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 liberror-prone-java all 2.18.0-1 [22.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libgeronimo-annotation-1.3-spec-java all 1.3-1 [11.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/universe amd64 libaopalliance-java all 20070526-7 [8166 B]
+Get:14 http://archive.ubuntu.com/ubuntu noble/universe amd64 libguice-java all 4.2.3-2 [1434 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble/universe amd64 libjansi-java all 2.4.1-2 [83.0 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven-parent-java all 35-1 [5810 B]
+Get:17 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-utils2-java all 3.4.2-1 [256 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwagon-provider-api-java all 3.5.3-1 [47.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven-resolver-java all 1.6.3-1 [544 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven-shared-utils-java all 3.3.4-1 [137 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-cipher-java all 2.0-1 [14.7 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-classworlds-java all 2.7.0-1 [50.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-component-annotations-java all 2.1.1-1 [6550 B]
+Get:24 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-interpolation-java all 1.26-1 [76.8 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble/universe amd64 libplexus-sec-dispatcher-java all 2.0-3 [28.1 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/universe amd64 libslf4j-java all 1.7.32-1 [141 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsisu-inject-java all 0.3.4-2 [347 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsisu-plexus-java all 0.3.4-3 [181 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble/universe amd64 libmaven3-core-java all 3.8.7-2 [1565 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwagon-file-java all 3.5.3-1 [7918 B]
+Get:31 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwagon-http-shaded-java all 3.5.3-1 [1332 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble/universe amd64 maven all 3.8.7-2 [18.3 kB]
+Fetched 10.1 MB in 2s (5090 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libapache-pom-java.
+(Reading database ... 10742 files and directories currently installed.)
+Preparing to unpack .../00-libapache-pom-java_29-2_all.deb ...
+Unpacking libapache-pom-java (29-2) ...
+Selecting previously unselected package libatinject-jsr330-api-java.
+Preparing to unpack .../01-libatinject-jsr330-api-java_1.0+ds1-5_all.deb ...
+Unpacking libatinject-jsr330-api-java (1.0+ds1-5) ...
+Selecting previously unselected package libgeronimo-interceptor-3.0-spec-java.
+Preparing to unpack .../02-libgeronimo-interceptor-3.0-spec-java_1.0.1-4fakesync_all.deb ...
+Unpacking libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+Selecting previously unselected package libcdi-api-java.
+Preparing to unpack .../03-libcdi-api-java_1.2-3_all.deb ...
+Unpacking libcdi-api-java (1.2-3) ...
+Selecting previously unselected package libcommons-cli-java.
+Preparing to unpack .../04-libcommons-cli-java_1.6.0-1_all.deb ...
+Unpacking libcommons-cli-java (1.6.0-1) ...
+Selecting previously unselected package libcommons-parent-java.
+Preparing to unpack .../05-libcommons-parent-java_56-1_all.deb ...
+Unpacking libcommons-parent-java (56-1) ...
+Selecting previously unselected package libcommons-io-java.
+Preparing to unpack .../06-libcommons-io-java_2.11.0-2_all.deb ...
+Unpacking libcommons-io-java (2.11.0-2) ...
+Selecting previously unselected package libcommons-lang3-java.
+Preparing to unpack .../07-libcommons-lang3-java_3.14.0-1_all.deb ...
+Unpacking libcommons-lang3-java (3.14.0-1) ...
+Selecting previously unselected package libjsr305-java.
+Preparing to unpack .../08-libjsr305-java_0.1~+svn49-11_all.deb ...
+Unpacking libjsr305-java (0.1~+svn49-11) ...
+Selecting previously unselected package libguava-java.
+Preparing to unpack .../09-libguava-java_32.0.1-1_all.deb ...
+Unpacking libguava-java (32.0.1-1) ...
+Selecting previously unselected package liberror-prone-java.
+Preparing to unpack .../10-liberror-prone-java_2.18.0-1_all.deb ...
+Unpacking liberror-prone-java (2.18.0-1) ...
+Selecting previously unselected package libgeronimo-annotation-1.3-spec-java.
+Preparing to unpack .../11-libgeronimo-annotation-1.3-spec-java_1.3-1_all.deb ...
+Unpacking libgeronimo-annotation-1.3-spec-java (1.3-1) ...
+Selecting previously unselected package libaopalliance-java.
+Preparing to unpack .../12-libaopalliance-java_20070526-7_all.deb ...
+Unpacking libaopalliance-java (20070526-7) ...
+Selecting previously unselected package libguice-java.
+Preparing to unpack .../13-libguice-java_4.2.3-2_all.deb ...
+Unpacking libguice-java (4.2.3-2) ...
+Selecting previously unselected package libjansi-java.
+Preparing to unpack .../14-libjansi-java_2.4.1-2_all.deb ...
+Unpacking libjansi-java (2.4.1-2) ...
+Selecting previously unselected package libmaven-parent-java.
+Preparing to unpack .../15-libmaven-parent-java_35-1_all.deb ...
+Unpacking libmaven-parent-java (35-1) ...
+Selecting previously unselected package libplexus-utils2-java.
+Preparing to unpack .../16-libplexus-utils2-java_3.4.2-1_all.deb ...
+Unpacking libplexus-utils2-java (3.4.2-1) ...
+Selecting previously unselected package libwagon-provider-api-java.
+Preparing to unpack .../17-libwagon-provider-api-java_3.5.3-1_all.deb ...
+Unpacking libwagon-provider-api-java (3.5.3-1) ...
+Selecting previously unselected package libmaven-resolver-java.
+Preparing to unpack .../18-libmaven-resolver-java_1.6.3-1_all.deb ...
+Unpacking libmaven-resolver-java (1.6.3-1) ...
+Selecting previously unselected package libmaven-shared-utils-java.
+Preparing to unpack .../19-libmaven-shared-utils-java_3.3.4-1_all.deb ...
+Unpacking libmaven-shared-utils-java (3.3.4-1) ...
+Selecting previously unselected package libplexus-cipher-java.
+Preparing to unpack .../20-libplexus-cipher-java_2.0-1_all.deb ...
+Unpacking libplexus-cipher-java (2.0-1) ...
+Selecting previously unselected package libplexus-classworlds-java.
+Preparing to unpack .../21-libplexus-classworlds-java_2.7.0-1_all.deb ...
+Unpacking libplexus-classworlds-java (2.7.0-1) ...
+Selecting previously unselected package libplexus-component-annotations-java.
+Preparing to unpack .../22-libplexus-component-annotations-java_2.1.1-1_all.deb ...
+Unpacking libplexus-component-annotations-java (2.1.1-1) ...
+Selecting previously unselected package libplexus-interpolation-java.
+Preparing to unpack .../23-libplexus-interpolation-java_1.26-1_all.deb ...
+Unpacking libplexus-interpolation-java (1.26-1) ...
+Selecting previously unselected package libplexus-sec-dispatcher-java.
+Preparing to unpack .../24-libplexus-sec-dispatcher-java_2.0-3_all.deb ...
+Unpacking libplexus-sec-dispatcher-java (2.0-3) ...
+Selecting previously unselected package libslf4j-java.
+Preparing to unpack .../25-libslf4j-java_1.7.32-1_all.deb ...
+Unpacking libslf4j-java (1.7.32-1) ...
+Selecting previously unselected package libsisu-inject-java.
+Preparing to unpack .../26-libsisu-inject-java_0.3.4-2_all.deb ...
+Unpacking libsisu-inject-java (0.3.4-2) ...
+Selecting previously unselected package libsisu-plexus-java.
+Preparing to unpack .../27-libsisu-plexus-java_0.3.4-3_all.deb ...
+Unpacking libsisu-plexus-java (0.3.4-3) ...
+Selecting previously unselected package libmaven3-core-java.
+Preparing to unpack .../28-libmaven3-core-java_3.8.7-2_all.deb ...
+Unpacking libmaven3-core-java (3.8.7-2) ...
+Selecting previously unselected package libwagon-file-java.
+Preparing to unpack .../29-libwagon-file-java_3.5.3-1_all.deb ...
+Unpacking libwagon-file-java (3.5.3-1) ...
+Selecting previously unselected package libwagon-http-shaded-java.
+Preparing to unpack .../30-libwagon-http-shaded-java_3.5.3-1_all.deb ...
+Unpacking libwagon-http-shaded-java (3.5.3-1) ...
+Selecting previously unselected package maven.
+Preparing to unpack .../31-maven_3.8.7-2_all.deb ...
+Unpacking maven (3.8.7-2) ...
+Setting up libslf4j-java (1.7.32-1) ...
+Setting up libplexus-utils2-java (3.4.2-1) ...
+Setting up libplexus-classworlds-java (2.7.0-1) ...
+Setting up libjsr305-java (0.1~+svn49-11) ...
+Setting up libaopalliance-java (20070526-7) ...
+Setting up libcommons-cli-java (1.6.0-1) ...
+Setting up libplexus-component-annotations-java (2.1.1-1) ...
+Setting up libgeronimo-annotation-1.3-spec-java (1.3-1) ...
+Setting up libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+Setting up libjansi-java (2.4.1-2) ...
+Setting up libapache-pom-java (29-2) ...
+Setting up libatinject-jsr330-api-java (1.0+ds1-5) ...
+Setting up libplexus-interpolation-java (1.26-1) ...
+Setting up libwagon-http-shaded-java (3.5.3-1) ...
+Setting up libcdi-api-java (1.2-3) ...
+Setting up libwagon-provider-api-java (3.5.3-1) ...
+Setting up libmaven-parent-java (35-1) ...
+Setting up libcommons-parent-java (56-1) ...
+Setting up libsisu-inject-java (0.3.4-2) ...
+Setting up libplexus-cipher-java (2.0-1) ...
+Setting up libsisu-plexus-java (0.3.4-3) ...
+Setting up libcommons-lang3-java (3.14.0-1) ...
+Setting up libplexus-sec-dispatcher-java (2.0-3) ...
+Setting up libwagon-file-java (3.5.3-1) ...
+Setting up libcommons-io-java (2.11.0-2) ...
+Setting up libmaven-resolver-java (1.6.3-1) ...
+Setting up libmaven-shared-utils-java (3.3.4-1) ...
+Setting up libguava-java (32.0.1-1) ...
+Setting up liberror-prone-java (2.18.0-1) ...
+Setting up libguice-java (4.2.3-2) ...
+Setting up libmaven3-core-java (3.8.7-2) ...
+Setting up maven (3.8.7-2) ...
+update-alternatives: using /usr/share/maven/bin/mvn to provide /usr/bin/mvn (mvn) in auto mode
+root@0c5468e9a031:/# mvn -version
+Apache Maven 3.8.7
+Maven home: /usr/share/maven
+Java version: 11.0.24, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "5.15.146.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+root@0c5468e9a031:/# apt install -y wget
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libpsl5t64 publicsuffix
+The following NEW packages will be installed:
+  libpsl5t64 publicsuffix wget
+0 upgraded, 3 newly installed, 0 to remove and 2 not upgraded.
+Need to get 520 kB of archives.
+After this operation, 1423 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 wget amd64 1.21.4-1ubuntu4.1 [334 kB]
+Fetched 520 kB in 2s (283 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libpsl5t64:amd64.
+(Reading database ... 11733 files and directories currently installed.)
+Preparing to unpack .../libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../publicsuffix_20231001.0357-0.1_all.deb ...
+Unpacking publicsuffix (20231001.0357-0.1) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../wget_1.21.4-1ubuntu4.1_amd64.deb ...
+Unpacking wget (1.21.4-1ubuntu4.1) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up publicsuffix (20231001.0357-0.1) ...
+Setting up wget (1.21.4-1ubuntu4.1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+root@0c5468e9a031:/# wget https://downloads.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0.tar.gz
+--2024-10-04 11:53:57--  https://downloads.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0.tar.gz
+Resolving downloads.apache.org (downloads.apache.org)... 88.99.208.237, 135.181.214.104, 2a01:4f8:10a:39da::2, ...
+Connecting to downloads.apache.org (downloads.apache.org)|88.99.208.237|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 965537117 (921M) [application/x-gzip]
+Saving to: 'hadoop-3.4.0.tar.gz'
+
+hadoop-3.4.0.tar.gz           100%[=================================================>] 920.81M  3.93MB/s    in 9m 50s
+
+2024-10-04 12:03:48 (1.56 MB/s) - 'hadoop-3.4.0.tar.gz' saved [965537117/965537117]
+
+root@0c5468e9a031:/# tar -xzf hadoop-3.4.0.tar.gz
+root@0c5468e9a031:/# echo 'export HADOOP_HOME=/hadoop-3.4.0' >> ~/.bashrc
+echo 'export PATH=$PATH:$HADOOP_HOME/bin' >> ~/.bashrc
+echo 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64' >> ~/.bashrc
+root@0c5468e9a031:/# source ~/.bashrc
+root@0c5468e9a031:/# hadoop version
+Hadoop 3.4.0
+Source code repository git@github.com:apache/hadoop.git -r bd8b77f398f626bb7791783192ee7a5dfaeec760
+Compiled by root on 2024-03-04T06:35Z
+Compiled on platform linux-x86_64
+Compiled with protoc 3.21.12
+From source with checksum f7fe694a3613358b38812ae9c31114e
+This command was run using /hadoop-3.4.0/share/hadoop/common/hadoop-common-3.4.0.jar
+root@0c5468e9a031:/# exit
+exit
+
+C:\Users\aparn>docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+ubuntu                     latest    61b2756d6fa9   2 weeks ago     78.1MB
+docker/welcome-to-docker   latest    c1f619b6477e   11 months ago   18.6MB
+
+C:\Users\aparn>docker pull bde2020/hadoop-java8
+Using default tag: latest
+Error response from daemon: pull access denied for bde2020/hadoop-java8, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\aparn>docker pull sequenceiq/hadoop-docker
+Using default tag: latest
+latest: Pulling from sequenceiq/hadoop-docker
+[DEPRECATION NOTICE] Docker Image Format v1 and Docker Image manifest version 2, schema 1 support is disabled by default and will be removed in an upcoming release. Suggest the author of docker.io/sequenceiq/hadoop-docker:latest to upgradethe image to the OCI Format or Docker Image manifest v2, schema 2. More information at https://docs.docker.com/go/deprecated-image-specs/
+
+C:\Users\aparn>docker pull sequenceiq/hadoop-docker
+Using default tag: latest
+latest: Pulling from sequenceiq/hadoop-docker
+[DEPRECATION NOTICE] Docker Image Format v1 and Docker Image manifest version 2, schema 1 support is disabled by default and will be removed in an upcoming release. Suggest the author of docker.io/sequenceiq/hadoop-docker:latest to upgradethe image to the OCI Format or Docker Image manifest v2, schema 2. More information at https://docs.docker.com/go/deprecated-image-specs/
+
+C:\Users\aparn>docker pull bde2020/hadoop-cluster
+Using default tag: latest
+Error response from daemon: pull access denied for bde2020/hadoop-cluster, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\aparn>docker pull harisekhon/hadoop
+Using default tag: latest
+latest: Pulling from harisekhon/hadoop
+d9aaf4d82f24: Pull complete
+71e193c229b6: Pull complete
+34e052ae12c1: Pull complete
+7c28f3b3ed5b: Pull complete
+b9aeb45a846c: Pull complete
+20d3342cd6a7: Pull complete
+96ad78d93f88: Pull complete
+39f02a9b4821: Pull complete
+934c7436ce6e: Pull complete
+f4001b22b79b: Pull complete
+ae9ff6a67139: Pull complete
+Digest: sha256:6c2668f5e59d4b870352cf52f1bcd75945eebe88fb81a1ea3df2464a65951ee6
+Status: Downloaded newer image for harisekhon/hadoop:latest
+docker.io/harisekhon/hadoop:latest
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview harisekhon/hadoop
+
+C:\Users\aparn>docker run -it --name hadoop-cluster -p 8088:8088 -p 50070:50070 harisekhon/hadoop /bin/bash
+[root@f978374a4fdb /]# hadoop version
+Hadoop 2.8.2
+Subversion https://git-wip-us.apache.org/repos/asf/hadoop.git -r 66c47f2a01ad9637879e95f80c41f798373828fb
+Compiled by jdu on 2017-10-19T20:39Z
+Compiled with protoc 2.5.0
+From source with checksum dce55e5afe30c210816b39b631a53b1d
+This command was run using /hadoop-2.8.2/share/hadoop/common/hadoop-common-2.8.2.jar
+[root@f978374a4fdb /]# exit
+exit
+
+C:\Users\aparn>docker pull lprhodes/hadoop:3.4.0
+Error response from daemon: pull access denied for lprhodes/hadoop, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\aparn>docker pull bde2020/hadoop:3.4.0
+Error response from daemon: pull access denied for bde2020/hadoop, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+C:\Users\aparn>docker pull harisekhon/hadoop:3.4.0
+Error response from daemon: manifest for harisekhon/hadoop:3.4.0 not found: manifest unknown: manifest unknown
+
+C:\Users\aparn>mkdir hadoop-docker
+
+C:\Users\aparn>cd hadoop-docker
+
+C:\Users\aparn\hadoop-docker>docker build -t my-hadoop:3.4.0 .
+[+] Building 0.2s (1/1) FINISHED                                                                         docker:default
+ => [internal] load build definition from Dockerfile                                                               0.1s
+ => => transferring dockerfile: 2B                                                                                 0.0s
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+
+View build details: docker-desktop://dashboard/build/default/default/t4r9l5qqv9ulblydzzl6n4m2i
+
+C:\Users\aparn\hadoop-docker>dir
+ Volume in drive C is OS
+ Volume Serial Number is 12D5-F4BF
+
+ Directory of C:\Users\aparn\hadoop-docker
+
+10/04/2024  12:52 PM    <DIR>          .
+10/04/2024  12:51 PM    <DIR>          ..
+10/04/2024  12:53 PM               639 Dockerfile.txt
+               1 File(s)            639 bytes
+               2 Dir(s)  800,739,897,344 bytes free
+
+C:\Users\aparn\hadoop-docker>ren Dockerfile.txt Dockerfile
+
+C:\Users\aparn\hadoop-docker>dir
+ Volume in drive C is OS
+ Volume Serial Number is 12D5-F4BF
+
+ Directory of C:\Users\aparn\hadoop-docker
+
+10/04/2024  12:54 PM    <DIR>          .
+10/04/2024  12:51 PM    <DIR>          ..
+10/04/2024  12:53 PM               639 Dockerfile
+               1 File(s)            639 bytes
+               2 Dir(s)  800,739,819,520 bytes free
+
+C:\Users\aparn\hadoop-docker>docker build -t my-hadoop:3.4.0 .
+[+] Building 820.2s (8/8) FINISHED                                                                       docker:default
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 678B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:20.04                                                    2.2s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/4] FROM docker.io/library/ubuntu:20.04@sha256:6d8d9799fe6ab3221965efac00b4c34a2bcc102c086a58dff9e19a08b913  5.0s
+ => => resolve docker.io/library/ubuntu:20.04@sha256:6d8d9799fe6ab3221965efac00b4c34a2bcc102c086a58dff9e19a08b913  0.0s
+ => => sha256:6d8d9799fe6ab3221965efac00b4c34a2bcc102c086a58dff9e19a08b913c7ef 1.34kB / 1.34kB                     0.0s
+ => => sha256:4334ab5016f708cf4a15794e48ebea4c5666fd2bad49679badc4930bf42d9ccb 424B / 424B                         0.0s
+ => => sha256:9522b5ff29b80fb026c27040cc14b743d714a57f3ca4cff1c76c9e59ca244163 2.30kB / 2.30kB                     0.0s
+ => => sha256:3823320faa42774534fd7eee0bd245af8cec6a720ad722144d40efa229291d8f 27.51MB / 27.51MB                   3.4s
+ => => extracting sha256:3823320faa42774534fd7eee0bd245af8cec6a720ad722144d40efa229291d8f                          1.4s
+ => [2/4] RUN apt-get update && apt-get install -y     openjdk-8-jdk     wget     tar     && rm -rf /var/lib/apt  54.9s
+ => [3/4] RUN wget https://downloads.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0.tar.gz -O /tmp/hadoop.t  751.9s
+ => [4/4] RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> /opt/hadoop/etc/hadoop/hadoop-env.sh    0.6s
+ => exporting to image                                                                                             5.3s
+ => => exporting layers                                                                                            5.3s
+ => => writing image sha256:2119d7224f1a96574c1f809fa23b245b666bb4c6050b8a1eef97752c7650d6e0                       0.0s
+ => => naming to docker.io/library/my-hadoop:3.4.0                                                                 0.0s
+
+View build details: docker-desktop://dashboard/build/default/default/xgjr1c31uug7io8n4894scugs
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+
+C:\Users\aparn\hadoop-docker>docker build -t my-hadoop:3.4.0 .docker run -it --name hadoop-cluster -p 8088:8088 -p 50070:50070 my-hadoop:3.4.0 /bin/bash
+unknown shorthand flag: 'i' in -it
+See 'docker buildx build --help'.
+
+C:\Users\aparn\hadoop-docker>docker run -it --name hadoop-cluster -p 8088:8088 -p 50070:50070 my-hadoop:3.4.0 /bin/bash
+docker: Error response from daemon: Conflict. The container name "/hadoop-cluster" is already in use by container "f978374a4fdb4da40ef1285eae7abbafcf62406bff7b8c708d99b6b0c179fd25". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+
+C:\Users\aparn\hadoop-docker>docker ps -a
+CONTAINER ID   IMAGE               COMMAND       CREATED             STATUS                         PORTS     NAMES
+f978374a4fdb   harisekhon/hadoop   "/bin/bash"   About an hour ago   Exited (0) About an hour ago             hadoop-cluster
+0c5468e9a031   ubuntu              "/bin/bash"   2 hours ago         Exited (0) 2 hours ago                   eloquent_khayyam
+88ab918f9f82   ubuntu              "/bin/bash"   2 hours ago         Exited (0) 2 hours ago                   zen_kepler
+d15e73fb728b   ubuntu              "/bin/bash"   2 hours ago         Exited (0) 2 hours ago                   strange_pasteur
+b2db98141f9f   ubuntu              "/bin/bash"   2 hours ago         Up 2 hours                               beautiful_burnell
+658161a4e949   ubuntu              "/bin/bash"   2 hours ago         Up 2 hours                               brave_merkle
+
+C:\Users\aparn\hadoop-docker>docker start -ai hadoop-cluster
+[root@f978374a4fdb /]# hadoop version
+Hadoop 2.8.2
+Subversion https://git-wip-us.apache.org/repos/asf/hadoop.git -r 66c47f2a01ad9637879e95f80c41f798373828fb
+Compiled by jdu on 2017-10-19T20:39Z
+Compiled with protoc 2.5.0
+From source with checksum dce55e5afe30c210816b39b631a53b1d
+This command was run using /hadoop-2.8.2/share/hadoop/common/hadoop-common-2.8.2.jar
+[root@f978374a4fdb /]# docker rm hadoop-cluster
+bash: docker: command not found
+[root@f978374a4fdb /]# exit
+exit
+
+C:\Users\aparn\hadoop-docker>docker rm hadoop-cluster
+hadoop-cluster
+
+C:\Users\aparn\hadoop-docker>docker run -it --name hadoop-cluster -p 8088:8088 -p 50070:50070 my-hadoop:3.4.0 /bin/bash
+root@db43bc55d3fe:/# hadoop version
+Hadoop 3.4.0
+Source code repository git@github.com:apache/hadoop.git -r bd8b77f398f626bb7791783192ee7a5dfaeec760
+Compiled by root on 2024-03-04T06:35Z
+Compiled on platform linux-x86_64
+Compiled with protoc 3.21.12
+From source with checksum f7fe694a3613358b38812ae9c31114e
+This command was run using /opt/hadoop/share/hadoop/common/hadoop-common-3.4.0.jar
+root@db43bc55d3fe:/# docker cp C:/hadoop/input/declaration_of_independence_raw_text.txt hadoop-cluster:/path/in/container/
+bash: docker: command not found
+root@db43bc55d3fe:/# exit
+exit
+
+C:\Users\aparn\hadoop-docker>docker cp C:/hadoop/input/declaration_of_independence_raw_text.txt hadoop-cluster:/path/in/container/
+no such directory
+
+C:\Users\aparn\hadoop-docker>docker exec -it hadoop-cluster /bin/bash
+Error response from daemon: container db43bc55d3fe4bcc984d1f762e8f58805c0b2d7909158b8358433f215c6c74a0 is not running
+
+What's next?
+  Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug hadoop-cluster
+  Learn more at https://docs.docker.com/go/debug-cli/
+
+C:\Users\aparn\hadoop-docker>docker run -it --name hadoop-cluster -p 8088:8088 -p 50070:50070 my-hadoop:3.4.0 /bin/bash
+docker: Error response from daemon: Conflict. The container name "/hadoop-cluster" is already in use by container "db43bc55d3fe4bcc984d1f762e8f58805c0b2d7909158b8358433f215c6c74a0". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+
+C:\Users\aparn\hadoop-docker>docker start hadoop-cluster
+hadoop-cluster
+
+C:\Users\aparn\hadoop-docker>docker exec -it hadoop-cluster /bin/bash
+root@db43bc55d3fe:/# hadoop version
+Hadoop 3.4.0
+Source code repository git@github.com:apache/hadoop.git -r bd8b77f398f626bb7791783192ee7a5dfaeec760
+Compiled by root on 2024-03-04T06:35Z
+Compiled on platform linux-x86_64
+Compiled with protoc 3.21.12
+From source with checksum f7fe694a3613358b38812ae9c31114e
+This command was run using /opt/hadoop/share/hadoop/common/hadoop-common-3.4.0.jar
+root@db43bc55d3fe:/# docker exec -it hadoop-cluster /bin/bash
+bash: docker: command not found
+root@db43bc55d3fe:/# mkdir -p /input
+root@db43bc55d3fe:/# exit
+exit
+
+What's next?
+  Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug hadoop-cluster
+  Learn more at https://docs.docker.com/go/debug-cli/
+
+C:\Users\aparn\hadoop-docker>docker cp C:/hadoop/input/declaration_of_independence_raw_text.txt hadoop-cluster:/input/
+Successfully copied 9.73kB to hadoop-cluster:/input/
+
+C:\Users\aparn\hadoop-docker>docker exec -it hadoop-cluster /bin/bash
+root@db43bc55d3fe:/# hadoop jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.0.jar wordcount /input/declaration_of_independence_raw_text.txt /output
+2024-10-04 21:06:04,704 INFO impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2024-10-04 21:06:04,791 INFO impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2024-10-04 21:06:04,791 INFO impl.MetricsSystemImpl: JobTracker metrics system started
+2024-10-04 21:06:04,939 INFO input.FileInputFormat: Total input files to process : 1
+2024-10-04 21:06:04,968 INFO mapreduce.JobSubmitter: number of splits:1
+2024-10-04 21:06:05,089 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local118267608_0001
+2024-10-04 21:06:05,089 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2024-10-04 21:06:05,192 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+2024-10-04 21:06:05,192 INFO mapreduce.Job: Running job: job_local118267608_0001
+2024-10-04 21:06:05,192 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+2024-10-04 21:06:05,199 INFO output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2024-10-04 21:06:05,200 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2024-10-04 21:06:05,200 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2024-10-04 21:06:05,201 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2024-10-04 21:06:05,228 INFO mapred.LocalJobRunner: Waiting for map tasks
+2024-10-04 21:06:05,228 INFO mapred.LocalJobRunner: Starting task: attempt_local118267608_0001_m_000000_0
+2024-10-04 21:06:05,252 INFO output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2024-10-04 21:06:05,253 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2024-10-04 21:06:05,253 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2024-10-04 21:06:05,280 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2024-10-04 21:06:05,283 INFO mapred.MapTask: Processing split: file:/input/declaration_of_independence_raw_text.txt:0+8148
+2024-10-04 21:06:05,308 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2024-10-04 21:06:05,309 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2024-10-04 21:06:05,309 INFO mapred.MapTask: soft limit at 83886080
+2024-10-04 21:06:05,309 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2024-10-04 21:06:05,309 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+2024-10-04 21:06:05,314 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2024-10-04 21:06:05,330 INFO mapred.LocalJobRunner:
+2024-10-04 21:06:05,331 INFO mapred.MapTask: Starting flush of map output
+2024-10-04 21:06:05,331 INFO mapred.MapTask: Spilling map output
+2024-10-04 21:06:05,331 INFO mapred.MapTask: bufstart = 0; bufend = 13457; bufvoid = 104857600
+2024-10-04 21:06:05,331 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 26209060(104836240); length = 5337/6553600
+2024-10-04 21:06:05,354 INFO mapred.MapTask: Finished spill 0
+2024-10-04 21:06:05,363 INFO mapred.Task: Task:attempt_local118267608_0001_m_000000_0 is done. And is in the process ofcommitting
+2024-10-04 21:06:05,366 INFO mapred.LocalJobRunner: map
+2024-10-04 21:06:05,366 INFO mapred.Task: Task 'attempt_local118267608_0001_m_000000_0' done.
+2024-10-04 21:06:05,373 INFO mapred.Task: Final Counters for attempt_local118267608_0001_m_000000_0: Counters: 18
+        File System Counters
+                FILE: Number of bytes read=289930
+                FILE: Number of bytes written=1001017
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+        Map-Reduce Framework
+                Map input records=65
+                Map output records=1335
+                Map output bytes=13457
+                Map output materialized bytes=8892
+                Input split bytes=117
+                Combine input records=1335
+                Combine output records=637
+                Spilled Records=637
+                Failed Shuffles=0
+                Merged Map outputs=0
+                GC time elapsed (ms)=0
+                Total committed heap usage (bytes)=218628096
+        File Input Format Counters
+                Bytes Read=8148
+2024-10-04 21:06:05,373 INFO mapred.LocalJobRunner: Finishing task: attempt_local118267608_0001_m_000000_0
+2024-10-04 21:06:05,374 INFO mapred.LocalJobRunner: map task executor complete.
+2024-10-04 21:06:05,384 INFO mapred.LocalJobRunner: Waiting for reduce tasks
+2024-10-04 21:06:05,384 INFO mapred.LocalJobRunner: Starting task: attempt_local118267608_0001_r_000000_0
+2024-10-04 21:06:05,391 INFO output.PathOutputCommitterFactory: No output committer factory defined, defaulting to FileOutputCommitterFactory
+2024-10-04 21:06:05,391 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2024-10-04 21:06:05,391 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2024-10-04 21:06:05,391 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2024-10-04 21:06:05,394 INFO mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@6d59515f
+2024-10-04 21:06:05,395 WARN impl.MetricsSystemImpl: JobTracker metrics system already initialized!
+2024-10-04 21:06:05,408 INFO reduce.MergeManagerImpl: MergerManager: memoryLimit=1271293568, maxSingleShuffleLimit=317823392, mergeThreshold=839053760, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2024-10-04 21:06:05,411 INFO reduce.EventFetcher: attempt_local118267608_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2024-10-04 21:06:05,432 INFO reduce.LocalFetcher: localfetcher#1 about to shuffle output of map attempt_local118267608_0001_m_000000_0 decomp: 8888 len: 8892 to MEMORY
+2024-10-04 21:06:05,436 INFO reduce.InMemoryMapOutput: Read 8888 bytes from map-output for attempt_local118267608_0001_m_000000_0
+2024-10-04 21:06:05,438 INFO reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 8888, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->8888
+2024-10-04 21:06:05,439 INFO reduce.EventFetcher: EventFetcher is interrupted.. Returning
+2024-10-04 21:06:05,440 INFO mapred.LocalJobRunner: 1 / 1 copied.
+2024-10-04 21:06:05,440 INFO reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2024-10-04 21:06:05,446 INFO mapred.Merger: Merging 1 sorted segments
+2024-10-04 21:06:05,446 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 8884 bytes
+2024-10-04 21:06:05,449 INFO reduce.MergeManagerImpl: Merged 1 segments, 8888 bytes to disk to satisfy reduce memory limit
+2024-10-04 21:06:05,449 INFO reduce.MergeManagerImpl: Merging 1 files, 8892 bytes from disk
+2024-10-04 21:06:05,450 INFO reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+2024-10-04 21:06:05,450 INFO mapred.Merger: Merging 1 sorted segments
+2024-10-04 21:06:05,451 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 8884 bytes
+2024-10-04 21:06:05,451 INFO mapred.LocalJobRunner: 1 / 1 copied.
+2024-10-04 21:06:05,456 INFO Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2024-10-04 21:06:05,467 INFO mapred.Task: Task:attempt_local118267608_0001_r_000000_0 is done. And is in the process ofcommitting
+2024-10-04 21:06:05,467 INFO mapred.LocalJobRunner: 1 / 1 copied.
+2024-10-04 21:06:05,468 INFO mapred.Task: Task attempt_local118267608_0001_r_000000_0 is allowed to commit now
+2024-10-04 21:06:05,469 INFO output.FileOutputCommitter: Saved output of task 'attempt_local118267608_0001_r_000000_0' to file:/output
+2024-10-04 21:06:05,469 INFO mapred.LocalJobRunner: reduce > reduce
+2024-10-04 21:06:05,469 INFO mapred.Task: Task 'attempt_local118267608_0001_r_000000_0' done.
+2024-10-04 21:06:05,470 INFO mapred.Task: Final Counters for attempt_local118267608_0001_r_000000_0: Counters: 24
+        File System Counters
+                FILE: Number of bytes read=307746
+                FILE: Number of bytes written=1016325
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+        Map-Reduce Framework
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=637
+                Reduce shuffle bytes=8892
+                Reduce input records=637
+                Reduce output records=637
+                Spilled Records=637
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=0
+                Total committed heap usage (bytes)=218628096
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Output Format Counters
+                Bytes Written=6416
+2024-10-04 21:06:05,470 INFO mapred.LocalJobRunner: Finishing task: attempt_local118267608_0001_r_000000_0
+2024-10-04 21:06:05,470 INFO mapred.LocalJobRunner: reduce task executor complete.
+2024-10-04 21:06:06,199 INFO mapreduce.Job: Job job_local118267608_0001 running in uber mode : false
+2024-10-04 21:06:06,203 INFO mapreduce.Job:  map 100% reduce 100%
+2024-10-04 21:06:06,205 INFO mapreduce.Job: Job job_local118267608_0001 completed successfully
+2024-10-04 21:06:06,222 INFO mapreduce.Job: Counters: 30
+        File System Counters
+                FILE: Number of bytes read=597676
+                FILE: Number of bytes written=2017342
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+        Map-Reduce Framework
+                Map input records=65
+                Map output records=1335
+                Map output bytes=13457
+                Map output materialized bytes=8892
+                Input split bytes=117
+                Combine input records=1335
+                Combine output records=637
+                Reduce input groups=637
+                Reduce shuffle bytes=8892
+                Reduce input records=637
+                Reduce output records=637
+                Spilled Records=1274
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=0
+                Total committed heap usage (bytes)=437256192
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=8148
+        File Output Format Counters
+                Bytes Written=6416
+root@db43bc55d3fe:/# ls /output
+_SUCCESS  part-r-00000
+root@db43bc55d3fe:/# cat /output/part-*
+&       1
+--That  1
+1776    1
+4,      1
+A       1
+Absolved        1
+Acts    2
+Administration  1
+Allegiance      1
+Alliances,      1
+America,        2
+And     1
+Annihilation,   1
+Appropriations  1
+Arbitrary       1
+Armies  2
+Arms    1
+Assembled,      1
+Assent  4
+Authority       1
+Boundaries      1
+Brethren,       1
+Britain 1
+Britain,        1
+British 1
+Brittish        1
+But     1
+Captive 1
+Charters,       1
+Citizens        1
+Civil   1
+Coasts, 1
+Colonies        1
+Colonies,       1
+Colonies:       1
+Colonies;       1
+Commerce,       1
+Congress,       2
+Consent 1
+Consent:        1
+Country,        1
+Course  1
+Creator 1
+Crown,  1
+Cruelty 1
+Declaration     1
+Declaration,    1
+Despotism,      1
+Enemies 1
+English 1
+Facts   1
+For     9
+Foreigners;     1
+Form    1
+Forms   1
+Fortunes        1
+Free    2
+Friends.        1
+General 1
+God     1
+Government      2
+Government,     2
+Government.     1
+Governments     2
+Governments:    1
+Governors       1
+Great   2
+Guards  1
+Hands.  1
+Happiness.      1
+Happiness.--That        1
+He      18
+Head    1
+Honor.  1
+Houses  1
+In      2
+Independent     3
+Indian  1
+Inhabitants     1
+Judge   1
+Judges  1
+Judiciary       1
+July    1
+Jury:   1
+Justice,        1
+King    1
+Lands.  1
+Laws    6
+Laws,   2
+Legislation:    1
+Legislative     1
+Legislature,    1
+Legislatures,   1
+Liberty 1
+Life,   1
+Lives,  1
+Men,    1
+Mercenaries     1
+Military        1
+Murders 1
+Name,   1
+Naturalization  1
+Nature  1
+Nature's        1
+New     1
+Nor     1
+Object  1
+Officers        1
+Offices,        1
+Oppressions     1
+Our     1
+Peace   1
+Peace,  1
+People  3
+Petitioned      1
+Petitions       1
+Power   1
+Prince  1
+Protection      1
+Providence,     1
+Province,       1
+Prudence,       1
+Quartering      1
+Records,        1
+Redress 1
+Representation  1
+Representative  1
+Representatives 1
+Right   2
+Rights, 1
+Safety  1
+Savages,        1
+Seas    2
+Separation,     1
+Standing        1
+State   2
+States  3
+States, 1
+States. 1
+States: 1
+States; 2
+Supreme 1
+System  1
+Systems 1
+Taxes   1
+That    1
+The     2
+They    1
+Things  1
+To      1
+Trade   1
+Trial   1
+Trial,  1
+Tyranny 1
+Tyrant, 1
+United  1
+War     1
+War,    2
+We      7
+We,     1
+When    1
+Will    1
+a       15
+abdicated       1
+abolish 1
+abolishing      3
+absolute        3
+abuses  1
+accommodation   1
+accordingly     1
+accustomed.     1
+acquiesce       1
+act     1
+affected        1
+after   1
+against 2
+ages,   2
+all     10
+alone,  1
+already 1
+alter   2
+altering        1
+among   5
+amongst 1
+amount  1
+an      5
+and     55
+another,        1
+answered        1
+any     2
+appealed        1
+appealing       1
+are     8
+are,    1
+armed   1
+as      4
+assume  1
+at      4
+attempts        1
+attend  1
+attentions      1
+away    1
+bands   1
+barbarous       1
+be      9
+bear    1
+become  1
+becomes 2
+been    4
+begun   1
+benefits        1
+between 1
+beyond  1
+bodies  2
+brethren.       1
+bring   1
+burnt   1
+by      13
+called  1
+candid  1
+cases   1
+cases,  1
+cause   1
+causes  1
+causes; 1
+certain 1
+changed 1
+character       1
+circumstances   2
+civilized       1
+combined        1
+commit  1
+common  1
+compleat        1
+compliance      1
+conclude        1
+conditions      1
+conditions.     1
+conjured        1
+connected       1
+connection      1
+connections     1
+consanguinity.  1
+consent 1
+constitution,   1
+constrained     1
+constrains      1
+contract        1
+convulsions     1
+correspondence. 1
+created 1
+cutting 1
+dangers 1
+deaf    1
+death,  1
+decent  1
+declare 1
+declare,        1
+declaring       2
+define  1
+denounces       1
+dependent       1
+depository      1
+depriving       1
+deriving        1
+design  1
+desolation      1
+destroyed       1
+destruction     1
+destructive     1
+dictate 1
+direct  1
+disavow 1
+disposed        1
+dissolutions,   1
+dissolve        1
+dissolved       1
+dissolved;      1
+distant 1
+districts       1
+divine  1
+do      1
+do,     1
+do.     1
+domestic        1
+duty,   1
+each    1
+earth,  1
+eat     1
+effect  1
+elected;        1
+emigration      1
+encourage       1
+endeavoured     2
+endowed 1
+ends,   1
+enlarging       1
+entitle 1
+equal   1
+equal,  1
+erected 1
+establish       1
+established     1
+establishing    2
+establishment   1
+events, 1
+every   2
+evils   1
+evinces 1
+example 1
+excited 1
+executioners    1
+exercise;       1
+experience      1
+exposed 1
+extend  1
+fall    1
+fatiguing       1
+fellow  1
+firm    1
+firmness        1
+fit     1
+for     20
+forbidden       1
+foreign 2
+form,   1
+former  1
+formidable      1
+forms   1
+foundation      1
+free    2
+friends 1
+from    6
+frontiers,      1
+full    1
+fundamentally   1
+future  1
+giving  1
+good    1
+good.   1
+governed,       1
+government,     1
+harrass 1
+has     20
+hath    1
+have    11
+having  1
+he      1
+here,   1
+here.   1
+high    1
+his     9
+history 2
+hither  1
+hither, 1
+hold    3
+human   1
+humble  1
+immediate       1
+impel   1
+importance,     1
+imposing        1
+in      18
+incapable       1
+indeed, 1
+independent     1
+inestimable     1
+inevitably      1
+inhabitants     1
+injuries        1
+injury. 1
+institute       1
+instituted      1
+instrument      1
+insurrections   1
+intentions,     1
+interrupt       1
+into    2
+introducing     1
+invariably      1
+invasion        1
+invasions       1
+invested        1
+is      10
+it      5
+it,     1
+its     3
+jurisdiction    2
+just    1
+justice 2
+kept    1
+kindred 1
+known   1
+large   4
+laws;   1
+laying  1
+legislate       1
+legislative     1
+legislature     1
+legislatures.   1
+let     1
+levy    1
+light   1
+likely  1
+lives   1
+long    3
+made    1
+magnanimity,    1
+mankind 2
+mankind,        1
+manly   1
+many    1
+marked  1
+may     2
+mean    1
+measures.       1
+men     1
+merciless       1
+migrations      1
+mock    1
+more    1
+most    5
+multitude       1
+must,   1
+mutually        1
+nation. 1
+native  1
+necessary       2
+necessity       1
+necessity,      1
+neglected       1
+neighbouring    1
+new     3
+not     1
+now     1
+object  1
+obstructed      1
+obstructing     1
+obtained;       1
+of      78
+off     2
+offences:       1
+offices,        1
+on      8
+once    1
+one     1
+only    1
+only.   1
+operation       1
+opinions        1
+opposing        1
+or      2
+organizing      1
+other   3
+others  3
+ought   2
+our     25
+out     2
+over    2
+own     1
+paralleled      1
+parts   1
+pass    3
+patient 1
+payment 1
+peace,  1
+people  2
+people, 2
+people. 3
+perfidy 1
+places  1
+pledge  1
+plundered       1
+political       2
+population      1
+power   1
+power.  1
+powers  3
+powers, 1
+powers. 1
+present 1
+pressing        1
+pretended       2
+prevent 1
+principles      1
+protecting      1
+protection      1
+prove   1
+provide 1
+public  2
+publish 1
+punishment      1
+purpose 2
+pursuing        1
+pursuit 1
+raising 1
+ravaged 1
+rectitude       1
+reduce  1
+refused 3
+refusing        2
+reliance        1
+relinquish      1
+remaining       1
+reminded        1
+render  2
+repeated        3
+repeatedly,     1
+requires        1
+respect 1
+rest    1
+returned        1
+right   4
+right,  1
+rights  1
+rights, 1
+rule    2
+ruler   1
+sacred  1
+salaries.       1
+same    2
+scarcely        1
+seas,   1
+secure  1
+security.--Such 1
+seem    1
+self-evident,   1
+sent    1
+separate        1
+separation.     1
+settlement      1
+sexes   1
+shall   1
+shewn,  1
+should  4
+so      2
+sole    1
+solemnly        1
+stage   1
+station 1
+subject 1
+submitted       1
+substance.      1
+such    5
+suffer, 1
+sufferable,     1
+sufferance      1
+superior        1
+support 1
+suspended       1
+suspended,      1
+suspending      1
+swarms  1
+taken   1
+taking  1
+tenure  1
+terms:  1
+than    1
+that    10
+the     76
+their   20
+them    11
+them,   3
+them.   1
+themselves      3
+therefore,      2
+therein 1
+these   13
+they    6
+thirteen        1
+this    2
+this,   1
+those   1
+throw   1
+thus    1
+ties    1
+till    1
+time    4
+time,   1
+times   1
+to      64
+together        1
+too     1
+totally 2
+towns,  1
+train   1
+transient       1
+transporting    2
+tried   1
+troops  1
+truths  1
+tyranny,        1
+tyrants 1
+unacknowledged  1
+unalienable     1
+unanimous       1
+uncomfortable,  1
+under   1
+undistinguished 1
+unfit   1
+united  2
+unless  2
+unusual,        1
+unwarrantable   1
+unworthy        1
+us      6
+us,     2
+us.     2
+us:     1
+usurpations,    3
+utterly 1
+valuable        1
+voice   1
+waging  1
+wanting 1
+warfare,        1
+warned  1
+we      3
+whatsoever.     1
+when    2
+whenever        1
+whereby 1
+which   9
+which,  1
+while   1
+wholesome       1
+whose   2
+will    1
+with    9
+within. 1
+without 2
+without,        1
+works   1
+world   1
+world.  1
+world:  1
+would   2
+root@db43bc55d3fe:/#

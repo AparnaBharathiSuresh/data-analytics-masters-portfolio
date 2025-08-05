@@ -1,0 +1,36 @@
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import java.io.IOException;
+import java.util.HashSet;
+
+public class LongestWordReducer extends Reducer<IntWritable, Text, Text, IntWritable> {
+
+    private Text longestWord = new Text();
+    private IntWritable longestLength = new IntWritable(0);
+    private HashSet<String> longestWords = new HashSet<>();
+	
+	@Override
+    public void reduce(IntWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+        if (key.get() > longestLength.get()) {
+            longestLength.set(key.get());
+            longestWords.clear();
+            for (Text value : values) {
+                longestWords.add(value.toString()); 
+            }
+        } else if (key.get() == longestLength.get()) {
+            for (Text value : values) {
+                longestWords.add(value.toString()); 
+            }
+        }
+    }
+
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
+        for (String word : longestWords) {
+            longestWord.set(word);
+            context.write(longestWord, longestLength);
+        }
+    }
+}

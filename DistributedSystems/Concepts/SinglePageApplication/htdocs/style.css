@@ -1,0 +1,86 @@
+ html, body {
+            overflow-y: auto; 
+            height: 100%;
+            margin: 0;
+			font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-image: url('Backdrop.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            margin: 0;
+			overflow-y: auto; 
+        }
+        a {
+            color: blue;
+            font-size: 18px;
+			text-decoration: none
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .sidebar {
+            background-image: url('Backdrop-1.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 23%;
+            max-height: 100vh; 
+            overflow-y: auto; 
+			display: flex; 
+            flex-direction: column;
+            padding: 5px;
+			margin-bottom: 0;
+			margin-top: 0;
+        }
+		.sidebar h5{
+			color: blue;
+			text-align:center;
+			padding: 10px 10px;
+			border-width: thick;
+            border-top: 2px solid black;
+			border-bottom: 2px solid black;
+			font-size: 130%;
+			line-height: 0.1
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+        .main {
+            background-image: url('Backdrop-1.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 78%;
+            padding: 30px;
+            overflow-y: auto;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+			max-height: 100vh;
+        }
+		  .main img {
+            position: absolute;
+			background: rgba(255, 255, 255, 0.2);
+            top: 50px;
+            right: 100px;
+            max-width: 300px;
+            height: auto;
+        }
+		.disclaimer {
+            color: brown;
+			font-family: 'Roboto', sans-serif;
+            position: absolute;
+            bottom: 150px;
+            right: 500px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 0.9em;
+        }
+		.disclaimer p{
+            color: black;
+            font-family: 'Roboto', sans-serif;
+			top: 250px;
+			right: 250px;
+			font-size:13px;
+			margin-top: 0;
+        }

@@ -1,0 +1,10 @@
+King,Lily,12371,lilyking@sjsu.edu,lily.king@yahoo.com
+Scott,Paul,12372,paulscott@sjsu.edu,paul.scott@gmail.com
+Green,Nora,12373,noragreen@sjsu.edu,nora.green@yahoo.com
+Baker,Chris,12374,chrisbaker@sjsu.edu,chris.baker@gmail.com
+Adams,Emily,12375,emilyadams@sjsu.edu,emily.adams@yahoo.com
+Nelson,Andrew,12376,andrewnelson@sjsu.edu,andrew.nelson@gmail.com
+Carter,Grace,12377,gracecarter@sjsu.edu,grace.carter@yahoo.com
+Mitchell,Henry,12378,henrymitchell@sjsu.edu,henry.mitchell@gmail.com
+Perez,Anna,12379,annaperez@sjsu.edu,anna.perez@yahoo.com
+Roberts,Eric,12380,ericroberts@sjsu.edu,eric.roberts@gmail.com

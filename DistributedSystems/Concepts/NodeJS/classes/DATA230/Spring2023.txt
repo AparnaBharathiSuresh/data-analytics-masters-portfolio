@@ -1,0 +1,12 @@
+Smith,Mary,12340,marysmith@sjsu.edu
+Johnson,Alex,12341,alexjohnson@sjsu.edu
+Williams,John,12342,johnwilliams@sjsu.edu
+Brown,Emily,12343,emilybrown@sjsu.edu
+Jones,Michael,12344,michaeljones@sjsu.edu
+Davis,Chris,12345,chrisdavis@sjsu.edu
+Garcia,Laura,12346,lauragarcia@sjsu.edu
+Miller,James,12347,jamesmiller@sjsu.edu
+Wilson,Sarah,12348,sarahwilson@sjsu.edu
+Moore,David,12349,davidmoore@sjsu.edu
+Brown,Mary,12350,marybrown@sjsu.edu
+Wilson,Chris,12351,chriswilson@sjsu.edu

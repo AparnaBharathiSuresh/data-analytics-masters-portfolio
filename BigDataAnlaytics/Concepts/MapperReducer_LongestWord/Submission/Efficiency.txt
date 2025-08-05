@@ -1,0 +1,20 @@
+MapReduce Approach
+This implementation utilizes a two-phase MapReduce process consisting of a mapper and a reducer:
+
+Mapper (LongestWordMapper):
+The mapper tokenizes each line of the text, splitting it into individual words while ignoring non-word characters.
+It calculates the length of each word and emits the length as the key and the word as the value.
+
+Reducer (LongestWordReducer):
+The reducer receives all words grouped by their lengths.
+It keeps track of the longest words found and stores them in a HashSet to avoid duplicates.
+In the cleanup method, the reducer emits the longest words along with their length.
+
+Efficiency Analysis:
+	1.Memory Optimization: The reducer uses a HashSet to collect unique longest words, preventing duplicates and managing memory efficiently.
+	2.Network I/O Reduction: By using IntWritable as the key (word length), the amount of data shuffled between the mappers and reducer is minimized. Only relevant data (the longest words and their lengths) is transmitted, which is crucial for performance in larger datasets.
+	3.Use of Cleanup Method: The implementation leverages the cleanup() method in both the mapper and reducer, allowing for efficient final emissions of results. This reduces the number of calls to context.write(), improving overall execution time.
+
+This approach is efficient for small to medium-sized files. However, for larger datasets, efficiency can be further improved by explicitly implementing a combiner class to reduce the amount of data transferred to the reducer.
+
+Adding a combiner for small datasets like the Declaration of Independence may introduce unnecessary overhead without providing significant benefits becuase a combiner is like a mini-reducer that runs on the mapper output before the data is sent over the network to the reducer. This can result in additional overhead in terms of processing time and complexity without a corresponding gain in performance.

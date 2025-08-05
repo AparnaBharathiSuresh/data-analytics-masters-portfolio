@@ -1,0 +1,10 @@
+Clark,Kevin,12361,kevincclark@sjsu.edu,kevin.clark@yahoo.com
+Rodriguez,Jessica,12362,jessicarodriguez@sjsu.edu,jessica.rodriguez@hotmail.com
+Lewis,Steven,12363,stevenlewis@sjsu.edu,steven.lewis@gmail.com
+Lee,Susan,12364,susanlee@sjsu.edu,susan.lee@yahoo.com
+Walker,Jason,12365,jasonwalker@sjsu.edu,jason.walker@gmail.com
+Hall,Jennifer,12366,jenniferhall@sjsu.edu,jennifer.hall@yahoo.com
+Young,George,12367,georgeyoung@sjsu.edu,george.young@hotmail.com
+Allen,Megan,12368,meganallen@sjsu.edu,megan.allen@gmail.com
+Sanchez,Karen,12369,karen.sanchez@sjsu.edu,karen.sanchez@yahoo.com
+Wright,Jacob,12370,jacobwright@sjsu.edu,jacob.wright@gmail.com

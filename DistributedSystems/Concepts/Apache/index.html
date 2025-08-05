@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+    <title>Ming-Hwa Wang</title>
+    <style>
+        html, body {
+            overflow: hidden; 
+            height: 100%;
+            margin: 0;
+			font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-image: url('Backdrop.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            margin: 0;
+        }
+        a {
+            color: blue;
+            font-size: 18px;
+			text-decoration: none
+        }
+        a:hover {
+            text-decoration: underline;
+			background-color: yellow;
+        }
+        .sidebar {
+            background-image: url('Backdrop-1.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 23%;
+            max-height: 100vh; 
+            overflow-y: auto; 
+			display: flex; 
+            flex-direction: column;
+            padding: 5px;
+			margin-bottom: 0;
+			margin-top: 0;
+        }
+        .main {
+            background-image: url('Backdrop.PNG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 78%;
+            padding: 30px;
+            overflow-y: auto;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+		  .main img {
+            position: absolute;
+			background: rgba(255, 255, 255, 0.2);
+            top: 50px;
+            right: 100px;
+            max-width: 300px;
+            height: auto;
+        }
+		.disclaimer {
+            color: brown;
+			font-family: 'Roboto', sans-serif;
+            position: absolute;
+            bottom: 150px;
+            right: 500px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 0.9em;
+        }
+		.disclaimer p{
+            color: black;
+            font-family: 'Roboto', sans-serif;
+			top: 250px;
+			right: 250px;
+			font-size:13px;
+			margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+		<h3 style="color: blue;
+            border: 2px solid green;
+			text-align:center;
+            border-radius: 5px;
+            border-width: thick;
+            border-style: double;
+            padding: 10px 10px;
+            display: inline-block;
+			font-size: 180%;">Prof. Ming-Hwa Wang</h3>
+        <h5 style="color: blue;
+			text-align:center;
+			padding: 10px 10px;
+			border-width: thick;
+            border-top: 2px solid black;
+			border-bottom: 2px solid black;
+			font-size: 130%;
+			line-height: 0.1
+			margin-bottom: 0;
+			margin-top: 0;">San Jose State University</h5>
+        <h3 style="margin-top: 0;font-size: 130%;">Course List</h3>
+        <a href="">Analytics Process</a><br>
+        <a href="">Artificial Intelligence</a><br>
+        <a href="">Big Data</a><br>
+        <a href="">Capstone</a><br>
+        <a href="">Cloud Computing</a><br>
+        <a href="">Compilers</a><br>
+        <a href="">Computer-Aided Design</a><br>
+        <a href="">Computer Architecture</a><br>
+        <a href="">Computer Graphics</a><br>
+        <a href="">Computer Networks</a><br>
+        <a href="">Computer Security</a><br>
+        <a href="">Database Systems</a><br>
+        <a href="">Data Mining</a><br>
+        <a href="">Data Structures and Computer Algorithms</a><br>
+        <a href="">Deep Learning</a><br>
+        <a href="">Discrete Structures</a><br>
+        <a href="">Distributed Computing</a><br>
+        <a href="">Information Retrieval</a><br>
+        <a href="">Interactive Multimedia & Game Programming</a><br>
+        <a href="">Internet Architecture and Protocols</a><br>
+        <a href="">Machine Learning</a><br>
+        <a href="">Natural Language Processing</a><br>
+        <a href="">Network Science</a><br>
+        <a href="">Operating Systems</a><br>
+        <a href="">Programming Languages</a><br>
+        <a href="">Projects</a><br>
+        <a href="">Semantic Web</a><br>
+        <a href="">SoC Verification</a><br>
+        <a href="">Visualization</a><br>
+        <a href="WebProgramming.html">Web Programming</a><br>
+        <a href="AwardBio.pdf">Biography</a><br>
+		<a href="https://www.sjsu.edu/data-programs/" style="color: blue;">SJSU Graduate Programs</a>
+    </div>
+    <div class="main">
+        <h1 style="font-size: 300%; color: brown;text-align:center;">Welcome</h1>
+		<h2 style="font-size: 200%;text-align:center;">Home Page - Prof.Ming-Hwa Wang</h2>
+		<h3>Publications:</h3>
+			<details style="font-size: 110%">
+				<summary>An Optimal and Flexible TCAM Software Simulation Algorithm</summary>
+				<pre style="text-align:left;font-size: 110%;">This paper presents an optimal and flexible algorithm for matching many 
+search keys against many entries with arbitrary wildcard (i.e., "don't care") 
+bits to simulate TCAM lookups in software. The algorithm is also enhanced by 
+using more memory to match search keys containing arbitrary wildcards. 
+To speed up the lookup operation in the functional TCAM model, the algorithm 
+stores intermediary results in a two-dimensional array based on the TCAM entries.
+It is proved that the algorithm uses the optimal number of bit wise-AND operations 
+in finding the matches. In a theoretical analysis, the proposed algorithm achieves 
+a speedup factor of more than 16 compared to sequential search using reasonable memory 
+footprints, and the best speedup reaches a factor of 27 in our experiments. Finally, 
+the empirical evaluation of the algorithm identifies a sweet spot in the trade-off between 
+space and time which can be practically configurable in simulation.</pre>
+			</details>
+			<details style="font-size: 110%">
+				<summary>Simulate CSP-like Synchronous Communications by MDC Asynchronous Message Passing and Pattern Matching</summary>
+				<a href="https://www.researchgate.net/publication/221085890_Simulate_CSP-like_Synchronous_Communications_by_MDC_Asynchronous_Message_Passing_and_Pattern_Matching">Link</a>
+			</details>
+			<details style="font-size: 110%">
+				<summary>Means of lowering the contrast of association product printing plates</summary>
+				<pre style="text-align:left;font-size: 110%;">Typescript. Thesis (M.S.)--Rochester Institute of Technology, 1982. 
+Includes bibliographical references (leaves 49-50).</pre>
+			</details>
+		<h3>Contact:</h3>
+		<p>Phone: (408) 805-4175</p>
+		<a href="mailto:m1wang@scu.edu">Email : m1wang@scu.edu </a>
+		<p>Office Hours: Monday & Wednesday 9:00pm-9:30pm</p>
+		<img src="Ming-Hwa-Wang-PhD.PNG" alt="Professor Ming-Hwa-Wang PhD">
+		<div class="disclaimer">
+			<h4 style="line-height:0.1;">Disclaimer</h4>
+			<p style="text-align: left;"> The content of these web pages is not generated by <br>
+			    and does not represent the views of San Jose State <br>
+				University or any of its departments or organizations.</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+    {
+        "_id": "675f5e0e36a6c7bbc002ef44",
+        "following": [],
+        "followers": [],
+        "name": "Angelo Cuffaro",
+        "email": "angelo_cuffaro@gmail.com",
+        "salt": "886597",
+        "password": "Fw4JR4Lads",
+        "hashed_password": "c11b8395296e5f3f320fb0404c695d6b9ee2f216",
+        "created": "2024-12-15T14:54:06.346206",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef45",
+        "following": [],
+        "followers": [],
+        "name": "Dongdong Zhu",
+        "email": "dongdong_zhu@gmail.com",
+        "salt": "189877",
+        "password": "BAzoRtwLhI",
+        "hashed_password": "dcb058c154c04e02168af4fbed4569c7094a3050",
+        "created": "2024-12-15T14:54:06.346212",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef46",
+        "following": [],
+        "followers": [],
+        "name": "Yifan Yu",
+        "email": "yifan_yu@gmail.com",
+        "salt": "812764",
+        "password": "ybJ2k7GJzf",
+        "hashed_password": "597380cb6d0eeb0cce7f58e3f4c7a5029e99bbaa",
+        "created": "2024-12-15T14:54:06.346217",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef47",
+        "following": [],
+        "followers": [],
+        "name": "Ajith Tom Payyappilly",
+        "email": "ajith_tom@gmail.com",
+        "salt": "262444",
+        "password": "2kJ9gJWUGV",
+        "hashed_password": "a44e59b1656f0301ac1e637746301e7fdb835a62",
+        "created": "2024-12-15T14:54:06.346223",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef48",
+        "following": [],
+        "followers": [],
+        "name": "Xinli Song",
+        "email": "xinli_song@gmail.com",
+        "salt": "295474",
+        "password": "YNVQOxWklh",
+        "hashed_password": "9e424e8a0957ed88e3f6853ebc9482161e0a9fc3",
+        "created": "2024-12-15T14:54:06.346229",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef49",
+        "following": [],
+        "followers": [],
+        "name": "Shanni Xi",
+        "email": "shanni_xi@gmail.com",
+        "salt": "491384",
+        "password": "hXTrEWLhaa",
+        "hashed_password": "46496a92d06c01307815d800150cd13d1dfe84d1",
+        "created": "2024-12-15T14:54:06.346234",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef4a",
+        "following": [],
+        "followers": [],
+        "name": "Sundaresan Tambaram Kailasam",
+        "email": "sundaresan_tambaram@gmail.com",
+        "salt": "334910",
+        "password": "k8QtNcn456",
+        "hashed_password": "5c2fdba2062d39e35474244b226c4c48d201d889",
+        "created": "2024-12-15T14:54:06.346240",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef4b",
+        "following": [],
+        "followers": [],
+        "name": "Kuo-chun Lee",
+        "email": "kuo-chun_lee@gmail.com",
+        "salt": "993818",
+        "password": "67IHTPJFxz",
+        "hashed_password": "83836d2f16e178c2bcdd578371bc4071a06ad77d",
+        "created": "2024-12-15T14:54:06.346246",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef4c",
+        "following": [],
+        "followers": [],
+        "name": "Liping Shen",
+        "email": "liping_shen@gmail.com",
+        "salt": "189035",
+        "password": "WTMdbj0GWH",
+        "hashed_password": "411818760a05c1fdc9b6861f9b0955dfbc9be640",
+        "created": "2024-12-15T14:54:06.346252",
+        "__v": 0
+    },
+    {
+        "_id": "675f5e0e36a6c7bbc002ef4d",
+        "following": [],
+        "followers": [],
+        "name": "Yanjun Sun",
+        "email": "yanjun_sun@gmail.com",
+        "salt": "272220",
+        "password": "yJ2UJ1RcBm",
+        "hashed_password": "0276f8b43a291a9b8a04f2bc3dabc4b46aaabd88",
+        "created": "2024-12-15T14:54:06.346258",
+        "__v": 0
+    }
+]

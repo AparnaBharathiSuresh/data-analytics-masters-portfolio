@@ -1,0 +1,11 @@
+Turner,Victoria,12381,victoriaturner@sjsu.edu,victoria.turner@yahoo.com
+Phillips,Jack,12382,jackphillips@sjsu.edu,jack.phillips@gmail.com
+Campbell,Olivia,12383,oliviacampbell@sjsu.edu,olivia.campbell@yahoo.com
+Parker,Henry,12384,henryparker@sjsu.edu,henry.parker@gmail.com
+Evans,Grace,12385,graceevans@sjsu.edu,grace.evans@yahoo.com
+Edwards,Daniel,12386,danieleduard@sjsu.edu,daniel.edwards@gmail.com
+Collins,Isabella,12387,isabellacollins@sjsu.edu,isabella.collins@yahoo.com
+Stewart,Matthew,12388,matthewstewart@sjsu.edu,matthew.stewart@gmail.com
+Sanchez,Laura,12389,laurasanchez@sjsu.edu,laura.sanchez@yahoo.com
+Morris,John,12390,johnmorris@sjsu.edu,john.morris@gmail.com
+Morris,Laura,12390,johnmorris@sjsu.edu,laura.morris@gmail.com

@@ -1,0 +1,16 @@
+
+C:\hadoop-3.4.0>sbin\start-dfs.cmd
+
+C:\hadoop-3.4.0>jps
+16096 Jps
+25936 NameNode
+884 DataNode
+
+C:\hadoop-3.4.0>sbin\stop-dfs.cmd
+SUCCESS: The process with PID 25936 has been terminated.
+Stopping NameNode process with PID 25936
+SUCCESS: The process with PID 884 has been terminated.
+Stopping DataNode process with PID 884
+Hadoop NameNode and DataNode processes have been stopped (if found).
+
+C:\hadoop-3.4.0>
