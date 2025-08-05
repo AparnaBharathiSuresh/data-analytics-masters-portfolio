@@ -1,102 +1,69 @@
-# 📚 Data Analytics Master's Portfolio- Aparna Bharathi Suresh – San Jose State University
+# 📚 Applied Data Science Portfolio – Aparna Bharathi Suresh
 
-This repository contains the **complete body of work** from my MS in Data Analytics at **San Jose State University (2023–2025)**.  
-It includes **assignments, labs, exams, code notebooks, and projects** from every course — covering math, databases, big data, ML, GenAI, and distributed systems.
-
----
-
-## 📐 DATA 220 – Mathematical Methods for Data Analytics
-> Linear algebra, probability, statistics, and optimization techniques for ML and AI.  
-📂 Contents:  
-- Matrix algebra & vector calculus notebooks  
-- Probability distributions & sampling assignments  
-- Gradient descent exercises  
-- Exam prep sheets & applied math case studies
+Welcome to my personal portfolio showcasing hands-on work across graduate-level courses from the **MS in Data Analytics** program at **San Jose State University (2024–2025)**. Each project reflects applied skills in data processing, visualization, analysis, modeling, and deployment.
 
 ---
 
-## 🗄️ DATA 225 – Database Systems
-> Fundamentals of relational and NoSQL databases.  
-📂 Contents:  
-- SQL query sets  
-- ER diagrams and schema design  
-- Normalization exercises  
-- MongoDB and NoSQL labs  
-- Final database application project
+## 🧠 Domains Covered
+
+### [📊 Data Visualization](./DATA220_MathematicalMethodsforDataAnalytics)
+- Visual storytelling with Tableau Public
+- Python-based exploratory data analysis using `matplotlib` and `seaborn`
+
+### [🗃️ Databases & SQL](./Data225_DatabaseSystems)
+- Relational schema design and ER modeling
+- Query optimization and data retrieval with SQL
+
+### [📐 Mathematical Foundations](./DATA220_MathematicalMethodsforDataAnalytics)
+- Probability, statistics, and linear algebra for ML
+- Implementation of matrix operations and regression from scratch
+
+### 🧵 Big Data & Distributed Systems
+[📁 View Folder](./Data225_DatabaseSystems)
+- Spark and Hadoop-based data pipelines
+- PySpark for large-scale transformations
+- Scalable file processing and cloud-based DAGs
+
+### 🧠 Machine Learning
+[📁 View Folder](./Data225_DatabaseSystems)
+- Model training and evaluation using `scikit-learn`
+- Projects involving classification, regression, clustering
+
+### 🤖 Deep Learning
+[📁 View Folder](./Data225_DatabaseSystems)
+- CNNs, RNNs, and transformers implemented with PyTorch or TensorFlow
+- Model visualization, training analysis, and evaluation metrics
+
+### 🧬 Generative AI
+[📁 View Folder](./Data225_DatabaseSystems)
+- Applications of LLMs and diffusion models
+- Fine-tuning, prompt engineering, and RAG-based systems
 
 ---
 
-## 📊 DATA 230 – Data Visualization
-> Visual storytelling and analytical dashboards.  
-📂 Contents:  
-- Tableau dashboards (with screenshots & exports)  
-- Python visualizations (Matplotlib, Seaborn, Plotly)  
-- Visual storytelling assignments  
-- Data storytelling report & peer feedback
+## 🌐 Interactive Tableau Dashboards
+
+- [💹 Profit Trends & Regional Performance Report](https://public.tableau.com/views/Assignment4_AparnaSuresh/Story1)
+- [🎮 Global Video Game Sales Dashboard](https://public.tableau.com/app/profile/aparna.bharathi.suresh/viz/Assignment1_Aparna_17087304538840/Story1)
+- [🌍 Life Expectancy & Global Health Insights](https://public.tableau.com/views/DATA_230_Project/Story1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link)
 
 ---
 
-## 🌐 DATA 236 – Distributed Systems for Data Science
-> Building scalable systems for cloud-based data apps.  
-📂 Contents:  
-- REST API assignments  
-- AWS EC2 & Docker deployment guides  
-- Distributed system design diagrams  
-- Travel recommendation website (frontend + backend)
+## ⚙️ Tools & Technologies
+
+- Python, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow  
+- SQL, Hive, Spark, Airflow  
+- Tableau, Git, Google Colab, Jupyter Notebooks  
 
 ---
 
-## 🧱 DATA 228 – Big Data Technologies
-> Large-scale data processing using Hadoop and Spark.  
-📂 Contents:  
-- Hadoop MapReduce jobs  
-- PySpark scripts for data transformation  
-- Flight delay & patent analysis pipelines  
-- CSV to Parquet converter  
-- Group project on GCP big data tools
+## 👩‍💼 About Me
+
+I’m Aparna Bharathi Suresh, a passionate data analytics graduate student focused on transforming data into meaningful insights through both traditional and AI-powered tools.
+
+- 🎓 MS in Data Analytics, San Jose State University  
+- 💡 Interests: Generative AI, Big Data, Machine Learning, Visualization  
+- 🌐 [LinkedIn](https://www.linkedin.com/in/aparna-suresh-4520512a3/)  
+- ✉️ Contact: aparnabharathi.suresh@sjsu.edu
 
 ---
-
-## 🤖 DATA 245 – Machine Learning
-> Foundational and applied machine learning.  
-📂 Contents:  
-- KNN from scratch vs scikit-learn comparison  
-- Naive Bayes for digit recognition  
-- Clustering mini-labs  
-- Cross-validation & metrics evaluation  
-- End-to-end ML pipeline assignment
-
----
-
-## 🧠 DATA 266 – Generative AI Models
-> Prompt engineering, fine-tuning LLMs, and multimodal generation.  
-📂 Contents:  
-- LoRA fine-tuning logs & scripts (Stable Diffusion)  
-- Multimodal RAG pipeline code  
-- Whisper + LLM voice agent  
-- Knowledge distillation notebook  
-- Class notes & model comparison writeups
-
----
-
-## 🧠 DATA 255 – Deep Learning
-> Image classification using neural networks.  
-📂 Contents:  
-- CNN implementation from scratch
-- YoloV9 implementation 
-- PyTorch model design  
-- Transfer learning (ResNet, EfficientNet)  
-- Data augmentation & performance tuning  
-- GPU memory profiling & training logs
-
----
-
-## 🧪 DATA 298A – Capstone Project
-> End-to-end Generative AI for Healthcare Agents.  
-📂 Contents:  
-- Project proposal & design docs  
-- Data processing & pipeline scripts  
-- Voice agent with LLM backend  
-- Agent architecture diagrams  
-- Evaluation metrics & user testing results
-
