@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "leave_management": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "C:\\SJSU\\Sem-3\\DATA 266\\Assignment\\13\\leave_management",
+                "run",
+                "mcp_server.py"
+            ]
+        }
+    }
+}

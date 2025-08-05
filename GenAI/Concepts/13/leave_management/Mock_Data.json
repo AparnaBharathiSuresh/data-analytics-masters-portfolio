@@ -1,0 +1,286 @@
+{
+  "Leaves_Data_Internal_Employees": {
+    "Alice Johnson": {
+      "balance": 10,
+      "history": [
+        "2024-12-12",
+        "2025-01-02"
+      ]
+    },
+    "Bob Smith": {
+      "balance": 4,
+      "history": [
+        "2025-06-15"
+      ]
+    },
+    "Charlie Davis": {
+      "balance": 8,
+      "history": [
+        "2025-01-02"
+      ]
+    },
+    "Diana Evans": {
+      "balance": 12,
+      "history": [
+        "2024-11-15",
+        "2024-11-16"
+      ]
+    },
+    "Ethan Brown": {
+      "balance": 3,
+      "history": []
+    },
+    "Fiona Clark": {
+      "balance": 7,
+      "history": [
+        "2024-10-10"
+      ]
+    },
+    "George Lewis": {
+      "balance": 6,
+      "history": []
+    },
+    "Hannah Walker": {
+      "balance": 9,
+      "history": [
+        "2025-02-14"
+      ]
+    },
+    "Ian Hall": {
+      "balance": 10,
+      "history": [
+        "2024-12-24",
+        "2024-12-31"
+      ]
+    },
+    "Julia Allen": {
+      "balance": 5,
+      "history": [
+        "2025-01-05"
+      ]
+    },
+    "Kevin Young": {
+      "balance": 10,
+      "history": []
+    },
+    "Laura King": {
+      "balance": 4,
+      "history": [
+        "2025-01-12"
+      ]
+    },
+    "Michael Wright": {
+      "balance": 6,
+      "history": [
+        "2024-11-01"
+      ]
+    },
+    "Nina Scott": {
+      "balance": 2,
+      "history": []
+    },
+    "Oscar Green": {
+      "balance": 11,
+      "history": [
+        "2024-09-09",
+        "2024-09-10"
+      ]
+    },
+    "Paula Adams": {
+      "balance": 3,
+      "history": []
+    },
+    "Quentin Baker": {
+      "balance": 9,
+      "history": [
+        "2024-10-01"
+      ]
+    },
+    "Rachel Mitchell": {
+      "balance": 7,
+      "history": [
+        "2025-03-01"
+      ]
+    },
+    "Sam Carter": {
+      "balance": 5,
+      "history": []
+    },
+    "Tina Phillips": {
+      "balance": 6,
+      "history": [
+        "2024-12-20"
+      ]
+    },
+    "Umar Turner": {
+      "balance": 8,
+      "history": [
+        "2024-08-15"
+      ]
+    },
+    "Vera Parker": {
+      "balance": 10,
+      "history": []
+    },
+    "Will Murphy": {
+      "balance": 6,
+      "history": [
+        "2025-01-20"
+      ]
+    },
+    "Xena Hughes": {
+      "balance": 4,
+      "history": []
+    },
+    "Yusuf Morgan": {
+      "balance": 7,
+      "history": [
+        "2025-02-10"
+      ]
+    },
+    "Zara Cooper": {
+      "balance": 3,
+      "history": [
+        "2024-11-11"
+      ]
+    },
+    "Adam Stewart": {
+      "balance": 9,
+      "history": []
+    },
+    "Bella Simmons": {
+      "balance": 5,
+      "history": [
+        "2024-12-01"
+      ]
+    },
+    "Caleb Reed": {
+      "balance": 1,
+      "history": [
+        "2025-06-20"
+      ]
+    },
+    "Dana Bell": {
+      "balance": 6,
+      "history": [
+        "2025-03-15"
+      ]
+    },
+    "Eli Torres": {
+      "balance": 8,
+      "history": [
+        "2024-07-04"
+      ]
+    },
+    "Faith Coleman": {
+      "balance": 4,
+      "history": []
+    },
+    "Gavin Perry": {
+      "balance": 10,
+      "history": [
+        "2024-12-10"
+      ]
+    },
+    "Hazel Long": {
+      "balance": 5,
+      "history": [
+        "2025-01-30"
+      ]
+    },
+    "Isaac Bailey": {
+      "balance": 3,
+      "history": []
+    },
+    "Jade Rivera": {
+      "balance": 7,
+      "history": [
+        "2024-09-01"
+      ]
+    },
+    "Kyle Richardson": {
+      "balance": 6,
+      "history": [
+        "2024-11-24"
+      ]
+    },
+    "Lily Cox": {
+      "balance": 9,
+      "history": []
+    },
+    "Miles Wood": {
+      "balance": 4,
+      "history": [
+        "2024-10-31"
+      ]
+    },
+    "Nora Ward": {
+      "balance": 5,
+      "history": []
+    },
+    "Owen Foster": {
+      "balance": 8,
+      "history": [
+        "2024-08-01"
+      ]
+    },
+    "Penny Bryant": {
+      "balance": 6,
+      "history": [
+        "2025-02-28"
+      ]
+    },
+    "Ray Fox": {
+      "balance": 2,
+      "history": []
+    },
+    "Sophie Graham": {
+      "balance": 9,
+      "history": [
+        "2024-12-11"
+      ]
+    },
+    "Tom Hudson": {
+      "balance": 3,
+      "history": []
+    },
+    "Uma Bishop": {
+      "balance": 7,
+      "history": [
+        "2025-01-18"
+      ]
+    },
+    "Victor Knight": {
+      "balance": 4,
+      "history": []
+    },
+    "Wendy Rose": {
+      "balance": 6,
+      "history": [
+        "2024-09-30"
+      ]
+    },
+    "Xavier Stone": {
+      "balance": 5,
+      "history": []
+    },
+    "Yara Lane": {
+      "balance": 8,
+      "history": [
+        "2025-03-25"
+      ]
+    }
+  },
+  "holiday_calendar": [
+    "2025-01-01",
+    "2025-01-20",
+    "2025-02-17",
+    "2025-05-26",
+    "2025-07-04",
+    "2025-09-01",
+    "2025-11-27",
+    "2025-11-28",
+    "2025-12-25",
+    "2025-12-31"
+  ]
+}
