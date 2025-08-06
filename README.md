@@ -168,11 +168,12 @@ Jul 2015 – Apr 2018
 
 ## 👩‍🏫 Teaching Experience
 
-Java Instructor – Family-Owned Computer Training Center
-Ongoing – India (Remote/On-site)
+Java & Python Instructor – Family-Owned Computer Training Center
+Ongoing – India (Remote)
 
-- Deliver hands-on Java programming training to high school and college students.
-- Designed course modules covering object-oriented programming, data structures, and project-based learning.
-- Mentor students on technical projects and introduce them to best practices in coding and debugging.
+- Teach hands-on programming courses in Java and Python to high school and college students.
+- Designed beginner-to-intermediate level modules covering OOP, data structures, algorithms, and application development.
+- Guide students through coding projects, debugging practices, and exam preparation.
+- Promote problem-solving skills using platforms like HackerRank and real-world use cases.
 
 ---
