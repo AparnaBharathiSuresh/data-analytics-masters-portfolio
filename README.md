@@ -53,43 +53,35 @@ Identified key predictors of life expectancy across 193 countries from 2000 to 2
 
 ## 🧠 Domains Covered
 
-### 📊 Data Visualization
-[📁 View Folder](./DataVisualization)
+### 📊 [Data Visualization](./DataVisualization)
 - Visual storytelling with Tableau Public
 - Python-based exploratory data analysis using `matplotlib` and `seaborn`
 
-### 🗃️ Databases & SQL
-[📁 View Folder](./DatabaseSystems)
+### 🗃️ [Databases & SQL](./DatabaseSystems)
 - Relational schema design and ER modeling
 - Query optimization and data retrieval with SQL
 
-### 📐 Mathematical Foundations
-[📁 View Folder](./MathematicalMethodsForDataAnalytics)
+### 📐 [Mathematical Foundations](./MathematicalMethodsForDataAnalytics)
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
-### 🧵 Big Data
-[📁 View Folder](./BigDataAnalytics)
+### 🧵 [Big Data](./BigDataAnalytics)
 - Spark and Hadoop-based data pipelines
 - PySpark for large-scale transformations
 - Scalable file processing and cloud-based DAGs
 
-### 🖧 Distributed Systems
-[📁 View Folder](./DistribuedSystems)
+### 🖧 [Distributed Systems](./DistribuedSystems)
 Web-based systems, REST APIs, and cloud integration for scalable applications
 
-### 🧠 Machine Learning
-[📁 View Folder](./Machine Learning)
+### 🧠 [Machine Learning](./Machine Learning)
 - Model training and evaluation using `scikit-learn`
 - Projects involving classification, regression, clustering
 
-### 🤖 Deep Learning
-[📁 View Folder](./DeepLearning)
+### 🤖 [Deep Learning](./DeepLearning)
 - CNNs, RNNs, and transformers implemented with PyTorch or TensorFlow
 - Model visualization, training analysis, and evaluation metrics
 
-### 🧬 Generative AI
-[📁 View Folder](./GenAI)
+### 🧬 [Generative AI](./GenAI)
 - Applied LLMs and diffusion models for creative and analytical tasks
 - Built RAG systems, fine-tuned models, and designed prompt strategies
 
