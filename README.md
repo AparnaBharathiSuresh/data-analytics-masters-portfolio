@@ -4,7 +4,8 @@
 
 I’m Aparna Bharathi Suresh, a passionate applied data science graduate student focused on transforming data into meaningful insights through both traditional and AI-powered tools.
 
-- 🎓 MS in Applied Data Science, San Jose State University  
+- 🎓 MS in Applied Data Science, San Jose State University
+- 🎓 BTech in Informtion Technology, Thiagarajar College of Engineering 
 - 💡 Interests: Generative AI, Big Data, Machine Learning, Visualization  
 - 🌐 [LinkedIn](https://www.linkedin.com/in/aparna-suresh-4520512a3/)  
 - ✉️ Contact: aparnabharathi.suresh@sjsu.edu
@@ -13,14 +14,14 @@ I’m Aparna Bharathi Suresh, a passionate applied data science graduate student
 
 ## 🧑‍💻 Experience
 
-###💡 Software Engineering Intern – Dimiour, VDart Digital (Remote)
+### 💡 Software Engineering Intern – Dimiour, VDart Digital (Remote)
 Apr 2025 – July 2025
 
 - Developed a Retrieval-Augmented Generation (RAG) system to streamline API documentation and improve developer productivity.
 - Designed SQL-driven dashboards and BI pipelines using Metabase for real-time insights.
 - Applied prompt engineering strategies to enhance generative model accuracy and content relevance.
 
-###🧪 Test Engineering Analyst – Accenture, India
+### 🧪 Test Engineering Analyst – Accenture, India
 Jul 2015 – Apr 2018
 
 - Automated test scripts and implemented SQL-based data validation for enterprise QA workflows.
@@ -56,52 +57,59 @@ Jul 2015 – Apr 2018
 ### 📰 [New York Times Sentiment Prediction](./DataBaseSystems/NewYorkTimes_Analysis)
 
 - Built a sentiment analysis model to classify article tone using livestream data from the NYT.
-
-Developed a full pipeline using AWS, Apache Airflow, dbt, and Snowflake as the central data warehouse.
+- Developed a full pipeline using AWS, Apache Airflow, dbt, and Snowflake as the central data warehouse.
 
 ### 🌐 [Inventors Circle](./DistribuedSystems/Project-InventorsCircle)
 
-Designed and deployed a MERN-based collaboration platform to connect inventors and researchers.
-
-Implemented hybrid recommendation systems and hosted on AWS EC2 for scalable access.
+- Designed and deployed a MERN-based collaboration platform to connect inventors and researchers.
+- Implemented hybrid recommendation systems and hosted on AWS EC2 for scalable access.
 
 ### 📊 [Life Expectancy Analysis](./MachineLearning/Project_LifeExpectancy)
 
-Analyzed global health trends using Tableau dashboards and regression models.
+- Analyzed global health trends using Tableau dashboards and regression models.
+- Identified key predictors of life expectancy across 193 countries from 2000 to 2015.
 
-Identified key predictors of life expectancy across 193 countries from 2000 to 2015.
+---
 
 ## 🧠 Domains Covered
 
 ### 📊 [Data Visualization](./DataVisualization)
+
 - Visual storytelling with Tableau Public
 - Python-based exploratory data analysis using `matplotlib` and `seaborn`
 
 ### 🗃️ [Databases & SQL](./DatabaseSystems)
+
 - Relational schema design and ER modeling
 - Query optimization and data retrieval with SQL
 
 ### 📐 [Mathematical Foundations](./MathematicalMethodsForDataAnalytics)
+
 - Probability, statistics, and linear algebra for ML
 - Implementation of matrix operations and regression from scratch
 
 ### 🧵 [Big Data](./BigDataAnalytics)
+
 - Spark and Hadoop-based data pipelines
 - PySpark for large-scale transformations
 - Scalable file processing and cloud-based DAGs
 
 ### 🖧 [Distributed Systems](./DistribuedSystems)
-Web-based systems, REST APIs, and cloud integration for scalable applications
+
+- Web-based systems, REST APIs, and cloud integration for scalable applications
 
 ### 🧠 [Machine Learning](./MachineLearning)
+
 - Model training and evaluation using `scikit-learn`
 - Projects involving classification, regression, clustering
 
 ### 🤖 [Deep Learning](./DeepLearning)
+
 - CNNs, RNNs, and transformers implemented with PyTorch or TensorFlow
 - Model visualization, training analysis, and evaluation metrics
 
 ### 🧬 [Generative AI](./GenAI)
+
 - Applied LLMs and diffusion models for creative and analytical tasks
 - Built RAG systems, fine-tuned models, and designed prompt strategies
 
@@ -117,8 +125,54 @@ Web-based systems, REST APIs, and cloud integration for scalable applications
 
 ## ⚙️ Tools & Technologies
 
-- Python, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow  
-- SQL, Hive, Spark, Airflow  
-- Tableau, Git, Google Colab, Jupyter Notebooks  
+###🧪 Languages & Libraries
+
+- Python, SQL, JavaScript, Bash
+- Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow, OpenAI API, Transformers (HuggingFace), Statsmodels
+
+### 🧠 Machine Learning & AI
+
+- Regression, Classification, Clustering, A/B Testing
+- Transformers, RAG (Retrieval-Augmented Generation), LLM Fine-tuning
+- Text-to-SQL, Prompt Engineering, Generative AI, Diffusion Models
+
+### 🛠️ Data Engineering & Processing
+
+- Apache Airflow, Apache Spark, Hadoop, Hive
+- dbt (data build tool), ETL Pipelines, Data Warehousing
+- Snowflake, Google BigQuery, PostgreSQL, Metabase
+
+### 📊 Visualization & BI
+
+- Tableau, Power BI, Matplotlib, Seaborn, Plotly
+- Interactive Dashboards, Storytelling with Data
+
+### ☁️ Cloud & DevOps
+
+- AWS (S3, EC2, Lambda), GCP (BigQuery, Vertex AI)
+- Docker, Git, GitHub Actions, Linux
+
+### 💻 Developer Tools
+
+- Git, VS Code, Jupyter Notebooks, Google Colab, JIRA, Postman
+
+---
+
+## 🏅 Certifications & Awards
+
+- 🏆 Google Project Management Certificate – Oct 2022
+- 📱 Mobile App Development – San Diego Community College
+- ⭐ Accenture Celebrates Excellence (ACE) Award – Aug 2016
+
+---
+
+## 👩‍🏫 Teaching Experience
+
+Java Instructor – Family-Owned Computer Training Center
+Ongoing – India (Remote/On-site)
+
+- Deliver hands-on Java programming training to high school and college students.
+- Designed course modules covering object-oriented programming, data structures, and project-based learning.
+- Mentor students on technical projects and introduce them to best practices in coding and debugging.
 
 ---
