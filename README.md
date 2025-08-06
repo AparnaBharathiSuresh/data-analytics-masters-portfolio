@@ -3,9 +3,9 @@
 Welcome to my personal portfolio showcasing hands-on work across graduate-level courses from the **MS in Data Analytics** program at **San Jose State University (2024–2025)**. Each project reflects applied skills in data processing, visualization, analysis, modeling, and deployment.
 
 ---
-💼 Key Projects
+## 💼 Key Projects
 
-🧬 [Generative AI Healthcare Agents]
+### 🧬 [Generative AI Healthcare Agents]
 
 Designed and fine-tuned LLM-powered chatbots for wellness applications using NLP and deep learning.
 
@@ -13,7 +13,7 @@ Implemented Retrieval-Augmented Generation (RAG) pipelines to ensure accurate, e
 
 Collaborated across disciplines to bridge technical innovation with real-world medical needs.
 
-🧏‍♀️ [Sign Language Interpretation System](./DeepLearning/Project_SignLanguage)
+### 🧏‍♀️ [Sign Language Interpretation System](./DeepLearning/Project_SignLanguage)
 
 Developed a system that interprets sign language data using generative AI and LLMs.
 
@@ -21,31 +21,31 @@ Utilized transformer-based models to map sign inputs into natural language sente
 
 Improved translation accuracy and contextual understanding through iterative feedback.
 
-🔍 [Text-to-SQL LLM Application](./GenAI/Project_TextToSQL)
+### 🔍 [Text-to-SQL LLM Application](./GenAI/Project_TextToSQL)
 
 Built a natural language interface to generate SQL using a fine-tuned GPT-4o Mini model on the SPIDER dataset.
 
 Integrated agentic reasoning to handle ambiguous queries and clarify user intent before SQL generation.
 
-🧠 [AI-Powered Patent Analysis System](./BigDataAnalytics/Project)
+### 🧠 [AI-Powered Patent Analysis System](./BigDataAnalytics/Project)
 
 Created an NLP-based system using PyTorch and the OpenAI API to analyze large-scale patent data.
 
 Built interactive dashboards for insight extraction and product innovation strategy.
 
-📰 [New York Times Sentiment Prediction](./DataBaseSystems/NewYorkTimes_Analysis)
+### 📰 [New York Times Sentiment Prediction](./DataBaseSystems/NewYorkTimes_Analysis)
 
 Built a sentiment analysis model to classify article tone using livestream data from the NYT.
 
 Developed a full pipeline using AWS, Apache Airflow, dbt, and Snowflake as the central data warehouse.
 
-🌐 [Inventors Circle](./DistribuedSystems/Project-InventorsCircle)
+### 🌐 [Inventors Circle](./DistribuedSystems/Project-InventorsCircle)
 
 Designed and deployed a MERN-based collaboration platform to connect inventors and researchers.
 
 Implemented hybrid recommendation systems and hosted on AWS EC2 for scalable access.
 
-📊 [Life Expectancy Analysis](./MachineLearning/Project_LifeExpectancy)
+### 📊 [Life Expectancy Analysis](./MachineLearning/Project_LifeExpectancy)
 
 Analyzed global health trends using Tableau dashboards and regression models.
 
