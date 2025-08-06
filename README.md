@@ -4,11 +4,11 @@
 
 I’m Aparna Bharathi Suresh, a passionate applied data science graduate student focused on transforming data into meaningful insights through both traditional and AI-powered tools.
 
-🎓 MS in Applied Data Science, San Jose State University
-🎓 BTech in Informtion Technology, Thiagarajar College of Engineering 
-💡 Interests: Generative AI, Big Data, Machine Learning, Visualization  
-🌐 [LinkedIn](https://www.linkedin.com/in/aparna-suresh-4520512a3/)  
-✉️ Contact: aparnabharathi.suresh@sjsu.edu
+- 🎓 MS in Applied Data Science, San Jose State University
+- 🎓 BTech in Informtion Technology, Thiagarajar College of Engineering 
+- 💡 Interests: Generative AI, Big Data, Machine Learning, Visualization  
+- 🌐 [LinkedIn](https://www.linkedin.com/in/aparna-suresh-4520512a3/)  
+- ✉️ Contact: aparnabharathi.suresh@sjsu.edu
 
 ---
 
@@ -160,9 +160,9 @@ Jul 2015 – Apr 2018
 
 ## 🏅 Certifications & Awards
 
-🏆 Google Project Management Certificate – Oct 2022
-📱 Mobile App Development – San Diego Community College
-⭐ Accenture Celebrates Excellence (ACE) Award – Aug 2016
+- 🏆 Google Project Management Certificate – Oct 2022
+- 📱 Mobile App Development – San Diego Community College
+- ⭐ Accenture Celebrates Excellence (ACE) Award – Aug 2016
 
 ---
 
