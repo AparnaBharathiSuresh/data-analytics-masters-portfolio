@@ -73,7 +73,7 @@ Identified key predictors of life expectancy across 193 countries from 2000 to 2
 ### 🖧 [Distributed Systems](./DistribuedSystems)
 Web-based systems, REST APIs, and cloud integration for scalable applications
 
-### 🧠 [Machine Learning](./Machine Learning)
+### 🧠 [Machine Learning](./MachineLearning)
 - Model training and evaluation using `scikit-learn`
 - Projects involving classification, regression, clustering
 
