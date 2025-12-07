@@ -2,7 +2,7 @@
 
 ## 👩‍💼 About Me
 
-I’m Aparna Bharathi Suresh, a passionate applied data science graduate student focused on transforming data into meaningful insights through both traditional and AI-powered tools.
+I’m Aparna Bharathi Suresh, a passionate applied data science graduate focused on transforming data into meaningful insights through both traditional and AI-powered tools.
 
 - 🎓 MS in Applied Data Science, San Jose State University
 - 🎓 BTech in Informtion Technology, Thiagarajar College of Engineering 
