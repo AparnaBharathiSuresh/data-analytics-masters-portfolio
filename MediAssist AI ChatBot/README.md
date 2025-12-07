@@ -1,10 +1,10 @@
-🏥 # **AI Healthcare Assistant**
+# 🏥 **AI Healthcare Assistant**
 End-to-End Medical Q&A System with Fine-Tuned LLMs + RAG
 
 This project is a HIPAA-aligned AI Healthcare Assistant that answers non-emergency medical questions, explains prescriptions, and supports chronic care guidance.
 We built the system end-to-end — from raw data processing to fine-tuning LLMs, evaluating them, building a RAG module, and deploying on Google Cloud.
 
-🚀 ##Key Features
+## 🚀 Key Features
 
 End-to-end ETL pipeline for cleaning and preparing medical datasets
 
@@ -22,7 +22,7 @@ HIPAA-aligned safety guardrails
 
 Deployed on Google Cloud (backend + storage + inference)
 
-📚 ##Datasets Used
+## 📚 Datasets Used
 
 MIMIC-III / MIMIC-IV
 
@@ -34,7 +34,7 @@ PubMedQA
 
 Pediatrics textbook (for RAG)
 
-🧠 ##System Workflow (Simplified)
+## 🧠 System Workflow (Simplified)
 
 ETL Pipeline cleans and processes medical datasets
 
@@ -48,7 +48,7 @@ Chatbot handles medical Q&A + prescription clarification
 
 Deployment on Google Cloud for secure and scalable access
 
-🖥️ Demo & Code
+## 🖥️ Demo & Code
 
 🎥 Demo video attached in the repository
 
