@@ -2,7 +2,7 @@
 End-to-End Medical Q&A System with Fine-Tuned LLMs + RAG
 
 This project is a HIPAA-aligned AI Healthcare Assistant that answers non-emergency medical questions, explains prescriptions, and supports chronic care guidance.
-We built the system end-to-end — from raw data processing to fine-tuning LLMs, evaluating them, building a RAG module, and deploying on Google Cloud.
+We built the system end-to-end - from raw data processing to fine-tuning LLMs, evaluating them, building a RAG module, and deploying on Google Cloud.
 
 ## 🚀 Key Features
 
