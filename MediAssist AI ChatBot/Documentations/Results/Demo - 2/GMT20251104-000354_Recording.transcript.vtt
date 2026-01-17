@@ -1,0 +1,178 @@
+WEBVTT
+
+1
+00:00:05.740 --> 00:00:12.619
+Aparna Bharathi Suresh: Hi, I'm Parna, I'm part of Team 3. Our project is, medical healthcare AI chatbot.
+
+2
+00:00:12.650 --> 00:00:27.710
+Aparna Bharathi Suresh: So, we have, taken 4 large, datasets, and we have cleaned them, and we have transformed it to a single, dataset, and we have fine-tuned 4 models. Those are, Metatron, MedAlpeca.
+
+3
+00:00:27.750 --> 00:00:44.040
+Aparna Bharathi Suresh: Medlama and, Biomistral, and we have evaluated all the four models, and we have, we saw that, Medlama is performing much better than other models. So, for… for our UI chatbot, we have made Medlama as our backend.
+
+4
+00:00:44.170 --> 00:00:50.869
+Aparna Bharathi Suresh: So, and for the front end, we are using Streamlit. So, now I'm just starting the Streamlit app.
+
+5
+00:00:59.430 --> 00:01:13.820
+Aparna Bharathi Suresh: And this is our app, so, since it's medical data, so we are just asking for consent to understand that it's only for educational purposes. When the user gives content, they can see the main page of the app.
+
+6
+00:01:13.910 --> 00:01:22.010
+Aparna Bharathi Suresh: So, this is the chatbot we have designed, and these are the departments that our chatbot is trained on.
+
+7
+00:01:22.210 --> 00:01:28.470
+Aparna Bharathi Suresh: And for each department, there will be, like, common conditions listed out here.
+
+8
+00:01:28.590 --> 00:01:39.139
+Aparna Bharathi Suresh: And the chatbot is connected to the, model through Hugging Face, and we have uploaded the Medlama and the Hugging Face over here.
+
+9
+00:01:39.760 --> 00:01:45.869
+Aparna Bharathi Suresh: So, this is the fine-tuned model. So we have uploaded it here. These are all the files.
+
+10
+00:01:46.780 --> 00:01:48.060
+Aparna Bharathi Suresh: And… ugh.
+
+11
+00:01:48.330 --> 00:01:58.490
+Aparna Bharathi Suresh: When we go back here… And if you just ask a question like, I have a severe headache…
+
+12
+00:01:59.230 --> 00:02:00.880
+Aparna Bharathi Suresh: What to do?
+
+13
+00:02:04.140 --> 00:02:16.559
+Aparna Bharathi Suresh: So, when we connected the model from Hugging Face, it was… since the model is very big, it took a lot of time to answer each question, so what we did is we have converted the model into GGUF,
+
+14
+00:02:16.640 --> 00:02:26.380
+Aparna Bharathi Suresh: format, and then we have applied quantization on top of it. So, the time has reduced from 15 to 30 seconds for every question.
+
+15
+00:02:26.680 --> 00:02:31.309
+Aparna Bharathi Suresh: So here, in the back, you can see that, the model is loaded as
+
+16
+00:02:31.520 --> 00:02:35.149
+Aparna Bharathi Suresh: a GGUF, and then it is quantized.
+
+17
+00:02:38.450 --> 00:02:40.830
+Aparna Bharathi Suresh: And it's waiting for the response.
+
+18
+00:02:42.080 --> 00:02:52.880
+Aparna Bharathi Suresh: The first time alone, it takes a little bit longer time than usual, because it has to load the model, and then convert, and then quantize, and then answer.
+
+19
+00:02:53.410 --> 00:03:10.119
+Aparna Bharathi Suresh: So, if I have a severe headache, what to do was my question? So, the answer it has given us, a headache can be caused by many reasons. It could be due to dehydration, lack of sleep, stress, etc. And if I ask any other question, like, what is…
+
+20
+00:03:10.310 --> 00:03:11.640
+Aparna Bharathi Suresh: DP?
+
+21
+00:03:13.970 --> 00:03:17.450
+Aparna Bharathi Suresh: So, for the first question, it has taken 32 seconds.
+
+22
+00:03:17.670 --> 00:03:24.489
+Aparna Bharathi Suresh: And it has generated, 61 tokens and, and 1.9 tokens per second.
+
+23
+00:03:24.740 --> 00:03:30.910
+Aparna Bharathi Suresh: And for the second question, yeah, it just takes time, because since we have not uploaded
+
+24
+00:03:31.150 --> 00:03:37.530
+Aparna Bharathi Suresh: it into the cloud, and we're not using GPU. It just takes time, so for the next,
+
+25
+00:03:37.670 --> 00:03:41.060
+Aparna Bharathi Suresh: Presentation, we are planning to upload into cloud.
+
+26
+00:03:41.450 --> 00:03:57.000
+Aparna Bharathi Suresh: So, compared to the first question, the second question took a lesser time. So, when we asked what is BP, it says blood pressure, or BP, is a measure of the force that blood exerts. Like, it just gives the correct answer, we can see here.
+
+27
+00:03:57.110 --> 00:04:09.519
+Aparna Bharathi Suresh: And if I ask, like, how do I know… If I have… Asthma… something like this.
+
+28
+00:04:13.930 --> 00:04:17.859
+Aparna Bharathi Suresh: In the back end also, we are just calculating how much time it takes
+
+29
+00:04:18.170 --> 00:04:23.789
+Aparna Bharathi Suresh: So for the first question, it took 32 seconds, and for the second, it took 27 seconds.
+
+30
+00:04:25.030 --> 00:04:30.659
+Aparna Bharathi Suresh: And it generated 128… it can generate up to 128 tokens.
+
+31
+00:04:30.990 --> 00:04:33.160
+Aparna Bharathi Suresh: For 28 characters.
+
+32
+00:04:36.080 --> 00:04:36.860
+Aparna Bharathi Suresh: Yeah.
+
+33
+00:04:48.110 --> 00:05:05.129
+Aparna Bharathi Suresh: Yeah, so, since the answer is a little bigger, it took more seconds. So, asthma is a respiratory condition that causes, inflammation on the airways. The main symptoms include coughing, wheezing. So, the answers are pretty decent, and it's good, too.
+
+34
+00:05:05.150 --> 00:05:08.719
+Aparna Bharathi Suresh: We just have to focus on reducing the time.
+
+35
+00:05:09.680 --> 00:05:13.509
+Aparna Bharathi Suresh: And, we have added all these, like, quick prompts.
+
+36
+00:05:13.630 --> 00:05:27.040
+Aparna Bharathi Suresh: So, for the cardiology department, there are, like, 4 quick prompts. If we just want, immediate answers, we can just click on this quick prompts, and for other departments also, there are, like, different quick prompts.
+
+37
+00:05:28.060 --> 00:05:31.060
+Aparna Bharathi Suresh: So, what are the common symptoms of stroke?
+
+38
+00:05:32.170 --> 00:05:38.999
+Aparna Bharathi Suresh: So you can see the answers here. And if you want to export the chat, you can just give export and it'll get downloaded.
+
+39
+00:05:39.330 --> 00:05:43.050
+Aparna Bharathi Suresh: You can see Teslick downloaded, chat export.
+
+40
+00:05:43.350 --> 00:05:47.380
+Aparna Bharathi Suresh: And, if you want to clear the chat, you can just keep clear.
+
+41
+00:05:48.330 --> 00:05:50.220
+Aparna Bharathi Suresh: And everything has cleared.
+
+42
+00:05:50.520 --> 00:05:54.999
+Aparna Bharathi Suresh: And we are… in here, we have added the privacy and data protection
+
+43
+00:05:55.230 --> 00:06:02.740
+Aparna Bharathi Suresh: Since we are dealing with medical data, we're just starting all these HIPAA complaints, notices, and data security things.
+
+44
+00:06:03.410 --> 00:06:05.049
+Aparna Bharathi Suresh: No, that's it. Thank you.
+
